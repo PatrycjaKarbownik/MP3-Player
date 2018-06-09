@@ -3,6 +3,7 @@ package application;
 import javafx.application.Platform;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
 
 import java.net.MalformedURLException;
 import java.util.Timer;
@@ -40,7 +41,7 @@ public class Actions {
                 playFunction();
             } else {
                 Media pick = new Media(ChooseFile.getAudioFile());
-                ChooseFile.player = new MediaPlayer(pick);
+                ChooseFile.setPlayer(new MediaPlayer(pick));// = new MediaPlayer(pick);
                 playFunction();
             }
 
@@ -53,13 +54,13 @@ public class Actions {
     private static void playFunction() {
         System.out.println("play function");
             if (ChooseFile.getPauseFlag() == true) {
-                ChooseFile.player.setStartTime(ChooseFile.getStartTimeAfterPause());
+                ChooseFile.getPlayer().setStartTime(ChooseFile.getStartTimeAfterPause());
                 ChooseFile.setPauseFlag(false);
             }
 
             Thread playThread = new Thread() {
                 public void run() {
-                    ChooseFile.player.play();
+                    ChooseFile.getPlayer().play();
                     ChooseFile.setFileInUse(true);
                 }
             };
@@ -76,6 +77,9 @@ public class Actions {
 
     public static void stopMusic() {
         System.out.println("stop");
+        ChooseFile.setPauseFlag(false);
+        ChooseFile.getPlayer().setStartTime(new Duration(0));
+        ChooseFile.getPlayer().stop();
     }
 
     public static void addToPlaylistFunction() {

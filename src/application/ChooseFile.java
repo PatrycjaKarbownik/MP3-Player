@@ -12,7 +12,7 @@ public class ChooseFile {
     private static String audioFile = null;
     private static Boolean fileInUse = false;
 
-    public static MediaPlayer player;
+    private static MediaPlayer player;
 
     private static Duration startTimeAfterPause;
     public static Duration d = new Duration(1000); // 1 sekunda
@@ -110,6 +110,10 @@ public class ChooseFile {
 
     public static MediaPlayer getPlayer() {
         return player;
+    }
+
+    public static void setPlayer(MediaPlayer mp) {
+        player = mp;
     }
 
     public static String getFileName() {
