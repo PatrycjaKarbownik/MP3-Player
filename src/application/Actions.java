@@ -16,6 +16,13 @@ public class Actions {
 
         ChooseFile.chooseFile();
         MyWindow.setNowPlayingLabel(ChooseFile.getFileName());
+        MusicFileInfo.setInfo();
+        MyWindow.setTitleLabel(MusicFileInfo.getTitleInfo());
+        MyWindow.setArtistLabel(MusicFileInfo.getArtistInfo());
+        MyWindow.setAlbumLabel(MusicFileInfo.getAlbumInfo());
+        MyWindow.setLengthLabel(MusicFileInfo.getLengthInfo());
+        MyWindow.setYearLabel(MusicFileInfo.getYearInfo());
+
 
         Timer timer = new Timer();
         timer.schedule(new SongProgress(), 0, 1000);

@@ -14,8 +14,13 @@ import java.net.MalformedURLException;
 public class MyWindow {
 
     private static Label nowPlaying;
-    private static ProgressBar progressBar;
+    private static Label title;
+    private static Label artist;
+    private static Label album;
+    private static Label yearNumber;
     private static Label currentTime;
+    private static ProgressBar progressBar;
+    private static Label length;
 
     MyWindow(Stage primaryStage) {
         primaryStage.setTitle("MP3 Player");
@@ -36,19 +41,19 @@ public class MyWindow {
         nowPlaying = new Label("Now playing: ");
             nowPlaying.setPrefSize(14 * GlobalData.sizeOfSquare, 1 * GlobalData.sizeOfSquare);
             nowPlaying.relocate(1 * GlobalData.sizeOfSquare, 1 * GlobalData.sizeOfSquare);
-        Label title = new Label("Title: " /*+ ChooseFile.getTitle()*/);
+        title = new Label("Title: " /*+ ChooseFile.getTitle()*/);
             title.setPrefSize(7 * GlobalData.sizeOfSquare, 1 * GlobalData.sizeOfSquare);
             title.relocate(1 * GlobalData.sizeOfSquare, 3 * GlobalData.sizeOfSquare);
-        Label artist = new Label("Artist: " /*+ ChooseFile.getArtist()*/);
+        artist = new Label("Artist: " /*+ ChooseFile.getArtist()*/);
             artist.setPrefSize(7 * GlobalData.sizeOfSquare, 1 * GlobalData.sizeOfSquare);
             artist.relocate(9 * GlobalData.sizeOfSquare, 3 * GlobalData.sizeOfSquare);
-        Label album = new Label("Album: " /*+ ChooseFile.getAlbum()*/);
+        album = new Label("Album: " /*+ ChooseFile.getAlbum()*/);
             album.setPrefSize(7 * GlobalData.sizeOfSquare, 1 * GlobalData.sizeOfSquare);
             album.relocate(1 * GlobalData.sizeOfSquare, 5 * GlobalData.sizeOfSquare);
 
-        Label trackNumber = new Label("Track number: " /*+ ChooseFile.getAlbum()*/);
-            trackNumber.setPrefSize(7 * GlobalData.sizeOfSquare, 1 * GlobalData.sizeOfSquare);
-            trackNumber.relocate(9 * GlobalData.sizeOfSquare, 5 * GlobalData.sizeOfSquare);
+        yearNumber = new Label("Year: " /*+ ChooseFile.getAlbum()*/);
+            yearNumber.setPrefSize(7 * GlobalData.sizeOfSquare, 1 * GlobalData.sizeOfSquare);
+            yearNumber.relocate(9 * GlobalData.sizeOfSquare, 5 * GlobalData.sizeOfSquare);
 
         currentTime = new Label("00:00");
             currentTime.setPrefSize(2 * GlobalData.sizeOfSquare, 1 * GlobalData.sizeOfSquare);
@@ -57,6 +62,10 @@ public class MyWindow {
         progressBar = new ProgressBar();
             progressBar.setPrefSize(10 * GlobalData.sizeOfSquare, 1 * GlobalData.sizeOfSquare);
             progressBar.relocate(3 * GlobalData.sizeOfSquare, 7 * GlobalData.sizeOfSquare);
+
+        length = new Label("00:00");
+            length.setPrefSize(2 * GlobalData.sizeOfSquare, 1 * GlobalData.sizeOfSquare);
+            length.relocate(14 * GlobalData.sizeOfSquare, 7 * GlobalData.sizeOfSquare);
 
         Button chooseButton = new Button("Choose MP3 file");
             chooseButton.setPrefSize(4 * GlobalData.sizeOfSquare, 1 * GlobalData.sizeOfSquare);
@@ -149,9 +158,10 @@ public class MyWindow {
         group.getChildren().add(title);
         group.getChildren().add(artist);
         group.getChildren().add(album);
-        group.getChildren().add(trackNumber);
+        group.getChildren().add(yearNumber);
         group.getChildren().add(currentTime);
         group.getChildren().add(progressBar);
+        group.getChildren().add(length);
         group.getChildren().add(chooseButton);
         group.getChildren().add(playButton);
         group.getChildren().add(addToPlaylistButton);
@@ -192,7 +202,47 @@ public class MyWindow {
     }
 
     public static void setNowPlayingLabel(String text) {
-        nowPlaying.setText("Now playing: " + text);
+        nowPlaying.setText("Now playing: \t" + text);
+    }
+
+    public static Label getTitleLabel() {
+        return title;
+    }
+
+    public static void setTitleLabel(String text) {
+        title.setText("Title: \t" + text);
+    }
+
+    public static Label getArtistLabel() {
+        return artist;
+    }
+
+    public static void setArtistLabel(String text) {
+        artist.setText("Artist: \t" + text);
+    }
+
+    public static Label getAlbumLabel() {
+        return album;
+    }
+
+    public static void setAlbumLabel(String text) {
+        album.setText("Album: \t" + text);
+    }
+
+    public static Label getYearLabel() {
+        return yearNumber;
+    }
+
+    public static void setYearLabel(String text) {
+        yearNumber.setText("Year: \t" + text);
+    }
+
+    public static Label getCurrentTime() {
+        return currentTime;
+    }
+
+    public static void setCurrentTime(String text) {
+        currentTime.setText(text);
     }
 
     public static ProgressBar getProgressBar() {
@@ -203,11 +253,12 @@ public class MyWindow {
         progressBar.setProgress(value);
     }
 
-    public static Label getCurrentTime() {
-        return currentTime;
+    public static Label getLengthLabel() {
+        return length;
     }
 
-    public static void setCurrentTime(String text) {
-        currentTime.setText(text);
+    public static void setLengthLabel(String text) {
+        length.setText(text);
     }
+
 }

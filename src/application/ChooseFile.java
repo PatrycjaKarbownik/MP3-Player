@@ -46,8 +46,9 @@ public class ChooseFile {
         // jesli muzyka jest odtwarzana, a uzytkownik wybierze nowy utwor, obecny nalezy przerwac
         if (fileInUse == true) {
             player.stop();
+            player.setStartTime(new Duration(0));
+            startTimeAfterPause = ChooseFile.getPlayer().getCurrentTime();
             fileInUse = false;
-            //fileNotInUseButIsHere = false;
         }
         
         if (file != null && file.exists() && (file.toString().substring(file.toString().length()-4).equals(".mp3")
@@ -57,7 +58,7 @@ public class ChooseFile {
             audioFile = file.toURI().toURL().toString();
 
             Actions.playMusic();
-        } else { // incorrect file chosen
+        } else {
             fileName = "Wybrano zly plik! Sprobuj jeszcze raz";
             audioFile = null;
         }

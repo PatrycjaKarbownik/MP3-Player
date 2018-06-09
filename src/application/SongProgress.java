@@ -15,7 +15,7 @@ public class SongProgress extends TimerTask {
 
     public static String getCurrentTime() {
         int temp = (int)ChooseFile.getPlayer().getCurrentTime().toSeconds();
-        if(temp / 10 >= 10)
+        if(temp / 60 >= 10)
             currentTime = String.valueOf(temp/60) + ":";
         else
             currentTime = "0" + String.valueOf(temp/60) + ":";
