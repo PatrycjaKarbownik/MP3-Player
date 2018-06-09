@@ -71,7 +71,6 @@ public class Actions {
         System.out.println("pause");
         ChooseFile.setPauseFlag(true);
         ChooseFile.setStartTimeAfterPause(ChooseFile.getPlayer().getCurrentTime());
-     //   ChooseFile.setFileInUseAndPause(true);
         ChooseFile.getPlayer().pause();
     }
 

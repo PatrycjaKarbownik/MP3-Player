@@ -124,8 +124,8 @@ public class ChooseFile {
         fileName = name;
     }
 
-    public static void getFilePath(String path) {
-        filePath = path;
+    public static String getFilePath() {
+        return filePath;
     }
 
     public static void setFilePath(String path) {

@@ -2,8 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e4fe393-9794-4e12-a1eb-f86ff3ff7b68" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/application/MusicFileInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Actions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/ChooseFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/ChooseFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Controls.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/SongProgress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/SongProgress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/AbstractID3v2FrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/AbstractID3v2FrameData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/AbstractID3v2Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/AbstractID3v2Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/BaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/BaseException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/BufferTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/BufferTools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ByteBufferUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ByteBufferUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/EncodedText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/EncodedText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/FileWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/FileWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3Wrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3Wrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v1Genres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v1Genres.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v1Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v1Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v22Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v22Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v23Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v23Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v24Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v24Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v24Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v24Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2ChapterFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2ChapterFrameData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2ChapterTOCFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2ChapterTOCFrameData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2CommentFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2CommentFrameData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2FrameSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2FrameSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2ObseleteFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2ObseleteFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2ObseletePictureFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2ObseletePictureFrameData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2PictureFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2PictureFrameData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2PopmFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2PopmFrameData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2TagFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2TagFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2TextFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2TextFrameData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2UrlFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2UrlFrameData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2WWWFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2WWWFrameData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/InvalidDataException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/InvalidDataException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/Mp3File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/Mp3File.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/MpegFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/MpegFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/MutableInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/MutableInteger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/NoSuchTagException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/NoSuchTagException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/NotSupportedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/NotSupportedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/UnsupportedTagException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/UnsupportedTagException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/Version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/Version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/package-info.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,21 +92,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Actions.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Actions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/Actions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+            <state relative-caret-position="252">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#470#822#0" expanded="true" />
                 <element signature="e#821#822#0" expanded="true" />
                 <element signature="e#1903#2082#0" expanded="true" />
                 <element signature="e#2081#2082#0" expanded="true" />
-                <element signature="e#2601#2602#0" expanded="true" />
-                <element signature="e#2654#2655#0" expanded="true" />
-                <element signature="e#2703#2704#0" expanded="true" />
-                <element signature="e#2754#2755#0" expanded="true" />
+                <element signature="e#2715#2716#0" expanded="true" />
+                <element signature="e#2768#2769#0" expanded="true" />
+                <element signature="e#2817#2818#0" expanded="true" />
+                <element signature="e#2868#2869#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,8 +115,8 @@
       <file leaf-file-name="SongProgress.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/SongProgress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+            <state relative-caret-position="168">
+              <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#251#252#0" expanded="true" />
@@ -85,7 +130,7 @@
         <entry file="file://$PROJECT_DIR$/src/application/ChooseFile.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="115" column="20" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+              <caret line="127" column="24" lean-forward="true" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2668#2669#0" expanded="true" />
@@ -135,11 +180,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controls.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/Controls.java">
+      <file leaf-file-name="MusicFileInfo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/application/MusicFileInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="415">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+              <folding>
+                <element signature="e#300#301#0" expanded="true" />
+                <element signature="e#331#332#0" expanded="true" />
+                <element signature="e#380#381#0" expanded="true" />
+                <element signature="e#413#414#0" expanded="true" />
+                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#491#492#0" expanded="true" />
+                <element signature="e#521#522#0" expanded="true" />
+                <element signature="e#558#559#0" expanded="true" />
+                <element signature="e#607#608#0" expanded="true" />
+                <element signature="e#639#640#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,10 +217,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/application/Controls.java" />
-        <option value="$PROJECT_DIR$/src/application/SongProgress.java" />
         <option value="$PROJECT_DIR$/src/application/MyWindow.java" />
-        <option value="$PROJECT_DIR$/src/application/ChooseFile.java" />
         <option value="$PROJECT_DIR$/src/application/Actions.java" />
+        <option value="$PROJECT_DIR$/src/application/SongProgress.java" />
+        <option value="$PROJECT_DIR$/src/application/ChooseFile.java" />
+        <option value="$PROJECT_DIR$/src/application/MusicFileInfo.java" />
       </list>
     </option>
   </component>
@@ -176,7 +234,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -305,15 +363,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528541619341</updated>
-      <workItem from="1528541622891" duration="13976000" />
+      <workItem from="1528541622891" duration="17307000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13976000" />
+    <option name="totallyTimeSpent" value="17307000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
@@ -370,13 +428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Controls.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -384,15 +435,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/Actions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#470#822#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#1903#2082#0" expanded="true" />
+            <element signature="e#2081#2082#0" expanded="true" />
+            <element signature="e#2715#2716#0" expanded="true" />
+            <element signature="e#2768#2769#0" expanded="true" />
+            <element signature="e#2817#2818#0" expanded="true" />
+            <element signature="e#2868#2869#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/SongProgress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        <state relative-caret-position="168">
+          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#251#252#0" expanded="true" />
             <element signature="e#285#286#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/Controls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -420,7 +496,7 @@
     <entry file="file://$PROJECT_DIR$/src/application/ChooseFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="115" column="20" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+          <caret line="127" column="24" lean-forward="true" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2668#2669#0" expanded="true" />
@@ -469,20 +545,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Actions.java">
+    <entry file="file://$PROJECT_DIR$/src/application/MusicFileInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+        <state relative-caret-position="415">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#470#822#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
-            <element signature="e#1903#2082#0" expanded="true" />
-            <element signature="e#2081#2082#0" expanded="true" />
-            <element signature="e#2601#2602#0" expanded="true" />
-            <element signature="e#2654#2655#0" expanded="true" />
-            <element signature="e#2703#2704#0" expanded="true" />
-            <element signature="e#2754#2755#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
           </folding>
         </state>
       </provider>

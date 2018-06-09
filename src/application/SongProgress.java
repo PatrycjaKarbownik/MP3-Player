@@ -5,7 +5,6 @@ import javafx.scene.media.MediaPlayer;
 import java.util.TimerTask;
 
 public class SongProgress extends TimerTask {
-    SongProgress() {}
 
     private static double songProgress;
     private static String currentTime;
@@ -27,7 +26,6 @@ public class SongProgress extends TimerTask {
 
         return currentTime;
     }
-
 
     @Override
     public void run() {
