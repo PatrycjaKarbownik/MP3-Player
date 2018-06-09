@@ -11,22 +11,21 @@ public class ChooseFile {
     static File file;
     private static String audioFile = null;
     private static Boolean fileInUse = false;
-    //private static Boolean fileNotInUseButIsHere = false;
 
     public static MediaPlayer player;
 
-    public static Duration startTimeAfterPause;
+    private static Duration startTimeAfterPause;
     public static Duration d = new Duration(1000); // 1 sekunda
 
    // private static double tempRate = 1.0; // do zapamietania szybkosci przed PAUSE
     private static Boolean pauseFlag = false; // ustawiony, aby pokazac, ze w skutek nacisniecia przycisku PAUSE, zostal zmodyfikowany startTime
-    private static Boolean wasPausedFlag = false; // ustawiony, aby pokazac czy kiedykolwiek byl wcisniety przycisk PAUSE
+  //  private static Boolean wasPausedFlag = false; // ustawiony, aby pokazac czy kiedykolwiek byl wcisniety przycisk PAUSE
     private static String fileName;
     private static String filePath;
     private static String title;
     private static String artist;
     private static String album;
-    private static String currentTime;
+    private static String trackLength;
 
     public ChooseFile() {
         try{
@@ -92,13 +91,6 @@ public class ChooseFile {
         fileInUse = bool;
     }
 
-    /*public static Boolean getFileNotInUseButIsHere() {
-        return fileNotInUseButIsHere;
-    }
-
-    public static void setFileNotInUseButIsHere(Boolean bool){
-        fileNotInUseButIsHere = bool;
-    }*/
 
     public static Boolean getPauseFlag() {
         return pauseFlag;
@@ -107,14 +99,14 @@ public class ChooseFile {
     public static void setPauseFlag(Boolean bool) {
         pauseFlag = bool;
     }
-
+/*
     public static Boolean getWasPausedFlag() {
         return wasPausedFlag;
     }
 
     public static void setWasPausedFlag(Boolean bool) {
         wasPausedFlag = bool;
-    }
+    }*/
 
     public static MediaPlayer getPlayer() {
         return player;
@@ -158,6 +150,14 @@ public class ChooseFile {
 
     public void setAlbum(String album) {
         this.album = album;
+    }
+
+    public static Duration getStartTimeAfterPause() {
+        return startTimeAfterPause;
+    }
+
+    public static void setStartTimeAfterPause(Duration time) {
+        startTimeAfterPause = time;
     }
 
 }
