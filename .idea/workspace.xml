@@ -2,53 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e4fe393-9794-4e12-a1eb-f86ff3ff7b68" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/application/MusicFileInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Actions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/ChooseFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/ChooseFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Controls.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/SongProgress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/SongProgress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/AbstractID3v2FrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/AbstractID3v2FrameData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/AbstractID3v2Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/AbstractID3v2Tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/BaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/BaseException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/BufferTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/BufferTools.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ByteBufferUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ByteBufferUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/EncodedText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/EncodedText.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/FileWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/FileWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3Wrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3Wrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v1Genres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v1Genres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v1Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v1Tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v22Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v22Tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v23Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v23Tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v24Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v24Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v24Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v24Tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2ChapterFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2ChapterFrameData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2ChapterTOCFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2ChapterTOCFrameData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2CommentFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2CommentFrameData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2FrameSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2FrameSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2ObseleteFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2ObseleteFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2ObseletePictureFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2ObseletePictureFrameData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2PictureFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2PictureFrameData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2PopmFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2PopmFrameData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2TagFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2TagFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2TextFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2TextFrameData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2UrlFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2UrlFrameData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/ID3v2WWWFrameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/ID3v2WWWFrameData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/InvalidDataException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/InvalidDataException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/Mp3File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/Mp3File.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/MpegFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/MpegFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/MutableInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/MutableInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/NoSuchTagException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/NoSuchTagException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/NotSupportedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/NotSupportedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/UnsupportedTagException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/UnsupportedTagException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/Version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/Version.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mpatric/mp3agic/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/MusicFileInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/MusicFileInfo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -183,9 +137,10 @@
       <file leaf-file-name="MusicFileInfo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/application/MusicFileInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="478">
+              <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#300#301#0" expanded="true" />
                 <element signature="e#331#332#0" expanded="true" />
                 <element signature="e#380#381#0" expanded="true" />
@@ -234,7 +189,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -363,15 +318,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528541619341</updated>
-      <workItem from="1528541622891" duration="17307000" />
+      <workItem from="1528541622891" duration="17913000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17307000" />
+    <option name="totallyTimeSpent" value="17913000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
@@ -547,9 +502,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/MusicFileInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="478">
+          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#300#301#0" expanded="true" />
             <element signature="e#331#332#0" expanded="true" />
             <element signature="e#380#381#0" expanded="true" />
