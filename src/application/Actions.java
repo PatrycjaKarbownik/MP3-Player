@@ -32,11 +32,21 @@ public class Actions {
             @Override
             public void run() {
                 if(ChooseFile.getPlayer().getStatus() == MediaPlayer.Status.PLAYING){
-                   // MyWindow.setProgressBar(SongProgress.getSongProgress());
                     Platform.runLater(() -> MyWindow.setCurrentTime(SongProgress.getCurrentTime()));
                 }
             }
         }, 0, 1000);
+
+        Timer timer3 = new Timer();
+        timer3.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                if(ChooseFile.getPlayer().getStatus() == MediaPlayer.Status.PLAYING){
+                    Platform.runLater(() -> MyWindow.setProgressBar(SongProgress.getSongProgress()));
+                }
+            }
+        }, 0, 1000);
+
 
     }
 
@@ -65,12 +75,12 @@ public class Actions {
                 ChooseFile.setPauseFlag(false);
             }
 
-            Thread playThread = new Thread() {
-                public void run() {
+            Thread playThread = new Thread(() -> {
+                /*public void run() */{
                     ChooseFile.getPlayer().play();
                     ChooseFile.setFileInUse(true);
                 }
-            };
+            });
             playThread.start();
     }
 
