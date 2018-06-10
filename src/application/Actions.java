@@ -1,6 +1,9 @@
 package application;
 
 import javafx.application.Platform;
+import javafx.collections.ObservableList;
+import javafx.scene.control.Slider;
+import javafx.scene.media.EqualizerBand;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
@@ -116,5 +119,15 @@ public class Actions {
     public static void balanceChange(){
         System.out.println("balance Change");
         ChooseFile.getPlayer().setBalance(MyWindow.getBalanceSlider()/100);
+    }
+
+    public static void equalizerBandChange(/*EqualizerBand eq*//*ObservableList<EqualizerBand> list, */EqualizerBand eq, Slider freqSlider) {
+        /*for(int i = 0; i < list.size(); ++i){
+            if(list.get(i) == eq){
+
+            }
+        }*/
+        eq.setGain(freqSlider.getValue());
+
     }
 }

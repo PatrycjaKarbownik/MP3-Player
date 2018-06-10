@@ -6,6 +6,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.media.EqualizerBand;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
@@ -25,6 +26,8 @@ public class MyWindow {
     private static Label length;
     private static Slider volumeSlider;
     private static Slider balanceSlider;
+
+    public static Slider f910_Slider;
 
     private String fontStyle = "-fx-font-size: 13; -fx-font-weight: bold;";
     private String buttonStyle = "-fx-font-size: 12; -fx-background-color: grey; -fx-text-fill: black;";
@@ -174,8 +177,18 @@ public class MyWindow {
             f910_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
             f910_Label.relocate(1 * sizeOfSquare, 17 * sizeOfSquare);
             f910_Label.setTextFill(Color.LIGHTGRAY);
-        Slider f910_Slider = createSlider(3, 1, 4, 17);
-            f910_Slider.setValue(50);
+        /*Slider */f910_Slider = createSlider(3, 1, 4, 17);
+            f910_Slider.setMin(-24);
+            f910_Slider.setMax(12);
+            f910_Slider.setValue(0);
+
+        //balanceSlider.valueProperty().addListener(e -> Actions.equalizerBandChange(f910_eq));
+
+        EqualizerBand f910_eq = new EqualizerBand(910, 1000, 0);
+//        ChooseFile.getPlayer().getAudioEqualizer();
+     //   ChooseFile.getPlayer().getAudioEqualizer().getBands().add(f910_eq);
+      //  balanceSlider.valueProperty().addListener(e -> Actions.equalizerBandChange(ChooseFile.getPlayer().getAudioEqualizer().getBands().get(9), f910_Slider/*, f910_eq*/));
+
 
         Label f36_Label = new Label("3,6kHz:");
             f36_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
