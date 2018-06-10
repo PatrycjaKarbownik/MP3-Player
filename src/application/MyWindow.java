@@ -1,10 +1,12 @@
 package application;
 
+import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 import java.net.MalformedURLException;
@@ -26,7 +28,7 @@ public class MyWindow {
 
     private String fontStyle = "-fx-font-size: 13; -fx-font-weight: bold;";
     private String buttonStyle = "-fx-font-size: 12; -fx-background-color: grey; -fx-text-fill: black;";
-    private static final int sizeOfSquare = 30;
+    public static final int sizeOfSquare = 30;
 
     MyWindow(Stage primaryStage) {
         primaryStage.setTitle("MP3 Player");
@@ -99,8 +101,11 @@ public class MyWindow {
         chooseButton.setOnAction(e -> {
             try {
                 Actions.openFile();
-            } catch (MalformedURLException e1) {
-                e1.printStackTrace();
+            } catch (NullPointerException | MalformedURLException e1) {
+                System.out.println("Blad w openFile: " + e);
+
+                errorStage("You must choose a file");
+                //e1.printStackTrace();
             }
         });
 
@@ -259,6 +264,32 @@ public class MyWindow {
         slider.relocate(x * sizeOfSquare, y * sizeOfSquare);
 
         return slider;
+    }
+
+    public static Stage errorStage(String text){
+        Stage errorStage = new Stage();
+        errorStage.setTitle("Error");
+        errorStage.setResizable(false);
+        errorStage.setAlwaysOnTop(true);
+        errorStage.setMaximized(false);
+        //errorStage.setMaxHeight(7 * MyWindow.sizeOfSquare);
+        // errorStage.setMaxWidth(5 * MyWindow.sizeOfSquare);
+
+        Group panel = new Group();
+        Label error = new Label(text);
+        error.setWrapText(true);
+        error.relocate(2 * sizeOfSquare, 1 * MyWindow.sizeOfSquare);
+        error.setPrefSize(3 * sizeOfSquare, 3 * sizeOfSquare);
+        error.setTextAlignment(TextAlignment.CENTER);
+        panel.getChildren().add(error);
+
+        Scene scene = new Scene(panel, 7 * sizeOfSquare, 5 * sizeOfSquare);
+
+
+        errorStage.setScene(scene);
+        errorStage.show();
+
+        return errorStage;
     }
 
     public static Label getNowPlayingLabel() {

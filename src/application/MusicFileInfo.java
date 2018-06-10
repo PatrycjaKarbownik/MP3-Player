@@ -78,8 +78,9 @@ public class MusicFileInfo {
 
 
         } catch (UnsupportedTagException | InvalidDataException | IOException e) {
+            System.out.println("Blad w funkcji setInfo: " + e.toString());
+            MyWindow.errorStage("Cannot download information about file");
             e.printStackTrace();
-            System.out.println("Blad w funkcji setInfo" + e.toString());
         }
     }
 

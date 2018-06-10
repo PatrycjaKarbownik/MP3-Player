@@ -19,6 +19,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         try {
+            this.primaryStage = primaryStage;
             MyWindow window = new MyWindow (primaryStage);
         } catch(Exception e) {
             e.printStackTrace();

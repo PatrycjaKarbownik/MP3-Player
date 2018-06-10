@@ -1,10 +1,16 @@
 package application;
 
 import javafx.application.Platform;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.media.EqualizerBand;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 import java.net.MalformedURLException;
@@ -54,7 +60,6 @@ public class Actions {
 
     public static void playMusic() {
         System.out.println("play");
-
         try {
             if (ChooseFile.getFileInUse() == true) {
                 playFunction();
@@ -65,39 +70,56 @@ public class Actions {
             }
 
 
-        } catch (Exception e) {
+        } catch (NullPointerException e) {
             System.out.println("Blad w playMusic: " + e);
+
+            /*Stage errorStage = */MyWindow.errorStage("Choose a file which you want to play");
         }
     }
 
     private static void playFunction() {
         System.out.println("play function");
-            if (ChooseFile.getPauseFlag() == true) {
-                ChooseFile.getPlayer().setStartTime(ChooseFile.getStartTimeAfterPause());
-                ChooseFile.setPauseFlag(false);
-            }
-
-            Thread playThread = new Thread(() -> {
-                /*public void run() */{
-                    ChooseFile.getPlayer().play();
-                    ChooseFile.setFileInUse(true);
+            if(ChooseFile.getPlayer().getStatus() != MediaPlayer.Status.PLAYING){
+                if (ChooseFile.getPauseFlag() == true) {
+                    ChooseFile.getPlayer().setStartTime(ChooseFile.getStartTimeAfterPause());
+                    ChooseFile.setPauseFlag(false);
                 }
-            });
-            playThread.start();
+
+                Thread playThread = new Thread(() -> {
+                    /*public void run() */{
+                        ChooseFile.getPlayer().play();
+                        ChooseFile.setFileInUse(true);
+                    }
+                });
+                playThread.start();
+            }
     }
 
     public static void pauseMusic() {
         System.out.println("pause");
-        ChooseFile.setPauseFlag(true);
-        ChooseFile.setStartTimeAfterPause(ChooseFile.getPlayer().getCurrentTime());
-        ChooseFile.getPlayer().pause();
+        try {
+            ChooseFile.setPauseFlag(true);
+            ChooseFile.setStartTimeAfterPause(ChooseFile.getPlayer().getCurrentTime());
+            ChooseFile.getPlayer().pause();
+        } catch (NullPointerException e) {
+            System.out.println("Blad w pauseMusic: " + e);
+
+            MyWindow.errorStage("Cannot pause a track. File wasn't chosen");
+        }
     }
 
     public static void stopMusic() {
         System.out.println("stop");
-        ChooseFile.setPauseFlag(false);
-        ChooseFile.getPlayer().setStartTime(new Duration(0));
-        ChooseFile.getPlayer().stop();
+        try {
+            ChooseFile.setPauseFlag(false);
+            ChooseFile.getPlayer().setStartTime(new Duration(0));
+            ChooseFile.getPlayer().stop();
+        }
+        catch (NullPointerException e) {
+            System.out.println("Blad w stopMusic: " + e);
+
+            MyWindow.errorStage("Cannot stop a track. File wasn't chosen.");
+        }
     }
 
     public static void addToPlaylistFunction() {
