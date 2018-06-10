@@ -110,24 +110,19 @@ public class Actions {
     }
 
     public static void volumeChange(/*Number value*/){
-        System.out.println("volume Change");
+        System.out.println("volume change");
         ChooseFile.getPlayer().setVolume(MyWindow.getVolumeSlider()/100);
 
         //ChooseFile.getPlayer().setVolume(value.doubleValue()/100);
     }
 
     public static void balanceChange(){
-        System.out.println("balance Change");
+        System.out.println("balance change");
         ChooseFile.getPlayer().setBalance(MyWindow.getBalanceSlider()/100);
     }
 
-    public static void equalizerBandChange(/*EqualizerBand eq*//*ObservableList<EqualizerBand> list, */EqualizerBand eq, Slider freqSlider) {
-        /*for(int i = 0; i < list.size(); ++i){
-            if(list.get(i) == eq){
-
-            }
-        }*/
+    public static void equalizerBandChange(EqualizerBand eq, Slider freqSlider) {
+        System.out.println("gain freq change: " + freqSlider.getValue());
         eq.setGain(freqSlider.getValue());
-
     }
 }

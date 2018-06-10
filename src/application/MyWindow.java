@@ -1,14 +1,10 @@
 package application;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
-import javafx.scene.media.EqualizerBand;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.net.MalformedURLException;
@@ -27,7 +23,6 @@ public class MyWindow {
     private static Slider volumeSlider;
     private static Slider balanceSlider;
 
-    public static Slider f910_Slider;
 
     private String fontStyle = "-fx-font-size: 13; -fx-font-weight: bold;";
     private String buttonStyle = "-fx-font-size: 12; -fx-background-color: grey; -fx-text-fill: black;";
@@ -151,6 +146,8 @@ public class MyWindow {
             volumeLabel.setStyle(fontStyle);
             volumeLabel.setTextFill(Color.LIGHTGRAY);
         volumeSlider = createSlider(3, 1, 4, 13);
+            volumeSlider.setMin(0);
+            volumeSlider.setMax(100);
             volumeSlider.setValue(100);
 
             volumeSlider.valueProperty().addListener(e -> Actions.volumeChange());
@@ -169,64 +166,57 @@ public class MyWindow {
         balanceSlider = createSlider(3, 1, 4, 15);
             balanceSlider.setMin(-100);
             balanceSlider.setMax(100);
-            balanceSlider.setValue(0);
 
         balanceSlider.valueProperty().addListener(e -> Actions.balanceChange());
 
-        Label f910_Label = new Label("910Hz:");
-            f910_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
-            f910_Label.relocate(1 * sizeOfSquare, 17 * sizeOfSquare);
-            f910_Label.setTextFill(Color.LIGHTGRAY);
-        /*Slider */f910_Slider = createSlider(3, 1, 4, 17);
-            f910_Slider.setMin(-24);
-            f910_Slider.setMax(12);
-            f910_Slider.setValue(0);
 
-        //balanceSlider.valueProperty().addListener(e -> Actions.equalizerBandChange(f910_eq));
+        Label f64_Label = new Label("64Hz:");
+            f64_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
+            f64_Label.relocate(1 * sizeOfSquare, 17 * sizeOfSquare);
+            f64_Label.setTextFill(Color.LIGHTGRAY);
+        Slider f64_Slider = createSlider(3, 1, 4, 17);
 
-        EqualizerBand f910_eq = new EqualizerBand(910, 1000, 0);
-//        ChooseFile.getPlayer().getAudioEqualizer();
-     //   ChooseFile.getPlayer().getAudioEqualizer().getBands().add(f910_eq);
-      //  balanceSlider.valueProperty().addListener(e -> Actions.equalizerBandChange(ChooseFile.getPlayer().getAudioEqualizer().getBands().get(9), f910_Slider/*, f910_eq*/));
+        f64_Slider.valueProperty().addListener(e -> Actions.equalizerBandChange(ChooseFile.getPlayer().getAudioEqualizer().getBands().get(1), f64_Slider));
 
+        Label f125_Label = new Label("125Hz:");
+            f125_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
+            f125_Label.relocate(1 * sizeOfSquare, 19 * sizeOfSquare);
+            f125_Label.setTextFill(Color.LIGHTGRAY);
+        Slider f125_Slider = createSlider(3, 1, 4, 19);
 
-        Label f36_Label = new Label("3,6kHz:");
-            f36_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
-            f36_Label.relocate(1 * sizeOfSquare, 19 * sizeOfSquare);
-            f36_Label.setTextFill(Color.LIGHTGRAY);
-        Slider f36_Slider = createSlider(3, 1, 4, 19);
-            f36_Slider.setValue(50);
+        f125_Slider.valueProperty().addListener(e -> Actions.equalizerBandChange(ChooseFile.getPlayer().getAudioEqualizer().getBands().get(2), f125_Slider));
 
-        Label f60_Label = new Label("60Hz:");
-            f60_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
-            f60_Label.relocate(9 * sizeOfSquare, 13 * sizeOfSquare);
-            f60_Label.setTextFill(Color.LIGHTGRAY);
-        Slider f60_Slider = createSlider(3, 1, 12, 13);
-            f60_Slider.setValue(50);
+        Label f500_Label = new Label("" + "500Hz:");
+            f500_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
+            f500_Label.relocate(9 * sizeOfSquare, 13 * sizeOfSquare);
+            f500_Label.setTextFill(Color.LIGHTGRAY);
+        Slider f500_Slider = createSlider(3, 1, 12, 13);
 
-        Label f230_Label = new Label("230Hz:");
-            f230_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
-            f230_Label.relocate(9 * sizeOfSquare, 15 * sizeOfSquare);
-            f230_Label.setTextFill(Color.LIGHTGRAY);
-        Slider f230_Slider = createSlider(3, 1, 12, 15);
-            f230_Slider.setValue(50);
+        f500_Slider.valueProperty().addListener(e -> Actions.equalizerBandChange(ChooseFile.getPlayer().getAudioEqualizer().getBands().get(4), f500_Slider));
 
-        Label f14_Label = new Label("14kHz:");
-            f14_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
-            f14_Label.relocate(9 * sizeOfSquare, 17 * sizeOfSquare);
-            f14_Label.setTextFill(Color.LIGHTGRAY);
-        Slider f14_Slider = createSlider(3, 1, 12, 17);
-            f14_Slider.setValue(50);
+        Label f1k_Label = new Label("1kHz:");
+            f1k_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
+            f1k_Label.relocate(9 * sizeOfSquare, 15 * sizeOfSquare);
+            f1k_Label.setTextFill(Color.LIGHTGRAY);
+        Slider f1k_Slider = createSlider(3, 1, 12, 15);
 
-        Label f30_Label = new Label("30kHz:");
-            f30_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
-            f30_Label.relocate(9 * sizeOfSquare, 19 * sizeOfSquare);
-            f30_Label.setTextFill(Color.LIGHTGRAY);
-        Slider f30_Slider = createSlider(3, 1, 12, 19);
-            f30_Slider.setValue(50);
+        f1k_Slider.valueProperty().addListener(e -> Actions.equalizerBandChange(ChooseFile.getPlayer().getAudioEqualizer().getBands().get(5), f1k_Slider));
 
+        Label f4k_Label = new Label("4kHz:");
+            f4k_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
+            f4k_Label.relocate(9 * sizeOfSquare, 17 * sizeOfSquare);
+            f4k_Label.setTextFill(Color.LIGHTGRAY);
+        Slider f4k_Slider = createSlider(3, 1, 12, 17);
 
+        f4k_Slider.valueProperty().addListener(e -> Actions.equalizerBandChange(ChooseFile.getPlayer().getAudioEqualizer().getBands().get(7), f4k_Slider));
 
+        Label f16k_Label = new Label("16kHz:");
+            f16k_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
+            f16k_Label.relocate(9 * sizeOfSquare, 19 * sizeOfSquare);
+            f16k_Label.setTextFill(Color.LIGHTGRAY);
+        Slider f16k_Slider = createSlider(3, 1, 12, 19);
+
+        f16k_Slider.valueProperty().addListener(e -> Actions.equalizerBandChange(ChooseFile.getPlayer().getAudioEqualizer().getBands().get(9), f16k_Slider));
 
 
         group.getChildren().add(nowPlaying);
@@ -245,21 +235,21 @@ public class MyWindow {
         group.getChildren().add(openPlaylistButton);
         group.getChildren().addAll(volumeLabel, volumeSlider);
         group.getChildren().addAll(balanceLabel, balanceSlider);
-        group.getChildren().addAll(f910_Label, f910_Slider);
-        group.getChildren().addAll(f36_Label, f36_Slider);
-        group.getChildren().addAll(f60_Label, f60_Slider);
-        group.getChildren().addAll(f230_Label, f230_Slider);
-        group.getChildren().addAll(f14_Label, f14_Slider);
-        group.getChildren().addAll(f30_Label, f30_Slider);
+        group.getChildren().addAll(f64_Label, f64_Slider);
+        group.getChildren().addAll(f125_Label, f125_Slider);
+        group.getChildren().addAll(f500_Label, f500_Slider);
+        group.getChildren().addAll(f1k_Label, f1k_Slider);
+        group.getChildren().addAll(f4k_Label, f4k_Slider);
+        group.getChildren().addAll(f16k_Label, f16k_Slider);
 
         return group;
     }
 
     private Slider createSlider(int width, int height, int x, int y) {
         Slider slider = new Slider();
-        slider.setMin(0);
-        slider.setMax(100);
-        slider.setValue(100);
+        slider.setMin(-24);
+        slider.setMax(12);
+        slider.setValue(0);
         slider.setShowTickLabels(true);
         slider.setShowTickMarks(true);
         slider.setMajorTickUnit(50);
