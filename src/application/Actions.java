@@ -105,4 +105,16 @@ public class Actions {
     public static void openPlaylistFunction() {
         System.out.println("open playlist");
     }
+
+    public static void volumeChange(/*Number value*/){
+        System.out.println("volume Change");
+        ChooseFile.getPlayer().setVolume(MyWindow.getVolumeSlider()/100);
+
+        //ChooseFile.getPlayer().setVolume(value.doubleValue()/100);
+    }
+
+    public static void balanceChange(){
+        System.out.println("balance Change");
+        ChooseFile.getPlayer().setBalance(MyWindow.getBalanceSlider()/100);
+    }
 }
