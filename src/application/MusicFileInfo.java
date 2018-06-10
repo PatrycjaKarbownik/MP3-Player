@@ -1,6 +1,5 @@
 package application;
 
-import javafx.util.Duration;
 import main.com.mpatric.mp3agic.ID3v2;
 import main.com.mpatric.mp3agic.InvalidDataException;
 import main.com.mpatric.mp3agic.Mp3File;

@@ -1,7 +1,6 @@
 package application;
 
 import javafx.application.Platform;
-import javafx.collections.ObservableList;
 import javafx.scene.control.Slider;
 import javafx.scene.media.EqualizerBand;
 import javafx.scene.media.Media;

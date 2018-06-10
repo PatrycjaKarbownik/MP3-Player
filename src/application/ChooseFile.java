@@ -157,6 +157,14 @@ public class ChooseFile {
         this.album = album;
     }
 
+    public static String getTrackLength() {
+        return trackLength;
+    }
+
+    public void setTrackLength(String length) {
+        this.trackLength = length;
+    }
+
     public static Duration getStartTimeAfterPause() {
         return startTimeAfterPause;
     }
