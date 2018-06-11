@@ -73,7 +73,7 @@ public class Actions {
         } catch (NullPointerException e) {
             System.out.println("Blad w playMusic: " + e);
 
-            /*Stage errorStage = */MyWindow.errorStage("Choose a file which you want to play");
+            /*Stage errorStage = */MyWindow.errorStage("Choose a file which you want to play.");
         }
     }
 
@@ -104,7 +104,7 @@ public class Actions {
         } catch (NullPointerException e) {
             System.out.println("Blad w pauseMusic: " + e);
 
-            MyWindow.errorStage("Cannot pause a track. File wasn't chosen");
+            MyWindow.errorStage("Cannot pause track. File not chosen.");
         }
     }
 
@@ -118,7 +118,7 @@ public class Actions {
         catch (NullPointerException e) {
             System.out.println("Blad w stopMusic: " + e);
 
-            MyWindow.errorStage("Cannot stop a track. File wasn't chosen.");
+            MyWindow.errorStage("Cannot stop track. File not chosen.");
         }
     }
 

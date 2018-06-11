@@ -104,7 +104,7 @@ public class MyWindow {
             } catch (NullPointerException | MalformedURLException e1) {
                 System.out.println("Blad w openFile: " + e);
 
-                errorStage("You must choose a file");
+                errorStage("You must choose a file.");
                 //e1.printStackTrace();
             }
         });
