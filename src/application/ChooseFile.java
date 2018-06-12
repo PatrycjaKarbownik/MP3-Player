@@ -15,11 +15,8 @@ public class ChooseFile {
     private static MediaPlayer player;
 
     private static Duration startTimeAfterPause;
-    public static Duration d = new Duration(1000); // 1 sekunda
 
-   // private static double tempRate = 1.0; // do zapamietania szybkosci przed PAUSE
     private static Boolean pauseFlag = false; // ustawiony, aby pokazac, ze w skutek nacisniecia przycisku PAUSE, zostal zmodyfikowany startTime
-  //  private static Boolean wasPausedFlag = false; // ustawiony, aby pokazac czy kiedykolwiek byl wcisniety przycisk PAUSE
     private static String fileName;
     private static String filePath;
     private static String title;
@@ -64,13 +61,6 @@ public class ChooseFile {
         }
     }
 
-    /*public static double getTempRate() {
-        return tempRate;
-    }*/
-
-    /*public static void setTempRate(double value) {
-        tempRate = value;
-    }*/
 
     public static File getFile() {
         return file;
@@ -91,8 +81,7 @@ public class ChooseFile {
     public static void setFileInUse(Boolean bool){
         fileInUse = bool;
     }
-
-
+    
     public static Boolean getPauseFlag() {
         return pauseFlag;
     }
@@ -100,14 +89,6 @@ public class ChooseFile {
     public static void setPauseFlag(Boolean bool) {
         pauseFlag = bool;
     }
-/*
-    public static Boolean getWasPausedFlag() {
-        return wasPausedFlag;
-    }
-
-    public static void setWasPausedFlag(Boolean bool) {
-        wasPausedFlag = bool;
-    }*/
 
     public static MediaPlayer getPlayer() {
         return player;
