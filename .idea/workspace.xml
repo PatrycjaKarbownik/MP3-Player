@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e4fe393-9794-4e12-a1eb-f86ff3ff7b68" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyMP3Player/data/02 Weak Fantasy.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyMP3Player/data/03 Life Is a Beat.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyMP3Player/testing/Tests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyMP3Player/testing/Tests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/ChooseFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/ChooseFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/02 Weak Fantasy.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/03 Life Is a Beat.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/MyWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/MyWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/testing/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testing/Tests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,11 +28,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChooseFile.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyWindow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/MyWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="150" column="70" selection-start-line="150" selection-start-column="70" selection-end-line="150" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#createSlider#0;class#MyWindow#0" />
+                <element signature="method#errorStage#0;class#MyWindow#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChooseFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/ChooseFile.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-294">
-              <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3880#3881#0" expanded="true" />
@@ -60,7 +69,7 @@
       <file leaf-file-name="Actions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/Actions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
+            <state relative-caret-position="37">
               <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -69,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tests.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Tests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/testing/Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
+            <state relative-caret-position="1449">
+              <caret line="69" column="63" lean-forward="true" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,11 +116,11 @@
         <option value="$PROJECT_DIR$/src/application/SongProgress.java" />
         <option value="$PROJECT_DIR$/src/application/Main.java" />
         <option value="$PROJECT_DIR$/src/application/MusicFileInfo.java" />
-        <option value="$PROJECT_DIR$/src/application/MyWindow.java" />
         <option value="$PROJECT_DIR$/src/application/Actions.java" />
         <option value="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/AbstractID3v2Tag.java" />
-        <option value="$PROJECT_DIR$/src/testing/Tests.java" />
         <option value="$PROJECT_DIR$/src/application/ChooseFile.java" />
+        <option value="$PROJECT_DIR$/src/application/MyWindow.java" />
+        <option value="$PROJECT_DIR$/src/testing/Tests.java" />
       </list>
     </option>
   </component>
@@ -125,10 +134,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="2420" />
-    <option name="height" value="1320" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -158,12 +167,6 @@
               <item name="MyMP3Player" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyMP3Player" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyMP3Player" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mp3agic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyMP3Player" type="b2602c69:ProjectViewProjectNode" />
@@ -309,48 +312,47 @@
       <workItem from="1528792368271" duration="1604000" />
       <workItem from="1528800120529" duration="1337000" />
       <workItem from="1528806276775" duration="330000" />
-      <workItem from="1528806831101" duration="10880000" />
+      <workItem from="1528806831101" duration="14774000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tests - 2018.06.12 at 19h 15m 03s.xml">
+    <history-entry file="Tests - 2018.06.12 at 21h 38m 28s.xml">
       <configuration name="Tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tests - 2018.06.12 at 19h 27m 30s.xml">
+    <history-entry file="Tests - 2018.06.12 at 21h 39m 43s.xml">
       <configuration name="Tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tests - 2018.06.12 at 19h 28m 16s.xml">
+    <history-entry file="Tests - 2018.06.12 at 21h 49m 46s.xml">
       <configuration name="Tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tests - 2018.06.12 at 19h 28m 50s.xml">
+    <history-entry file="Tests - 2018.06.12 at 22h 03m 31s.xml">
       <configuration name="Tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tests - 2018.06.12 at 19h 28m 58s.xml">
+    <history-entry file="Tests - 2018.06.12 at 22h 03m 56s.xml">
       <configuration name="Tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tests - 2018.06.12 at 19h 29m 42s.xml">
+    <history-entry file="Tests - 2018.06.12 at 22h 04m 11s.xml">
       <configuration name="Tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tests - 2018.06.12 at 19h 30m 07s.xml">
+    <history-entry file="Tests - 2018.06.12 at 22h 04m 31s.xml">
       <configuration name="Tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tests - 2018.06.12 at 19h 30m 46s.xml">
+    <history-entry file="Tests - 2018.06.12 at 22h 04m 52s.xml">
       <configuration name="Tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tests - 2018.06.12 at 19h 32m 50s.xml">
+    <history-entry file="Tests - 2018.06.12 at 22h 08m 10s.xml">
       <configuration name="Tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tests - 2018.06.12 at 19h 36m 43s.xml">
+    <history-entry file="Tests - 2018.06.12 at 22h 09m 10s.xml">
       <configuration name="Tests" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69579000" />
+    <option name="totallyTimeSpent" value="73473000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="TODO" order="11" />
@@ -362,11 +364,11 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.49947917" visible="true" weight="0.32689655" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49947917" weight="0.25185972" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.24934895" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.19947916" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.4275862" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
@@ -718,16 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/MyWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2037">
-          <caret line="106" column="51" selection-start-line="106" selection-start-column="51" selection-end-line="106" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/mpatric/mp3agic/InvalidDataException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -848,26 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Actions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/MusicFileInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="42" column="38" selection-start-line="41" selection-start-column="12" selection-end-line="42" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/mpatric/mp3agic/Mp3File.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -894,20 +866,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testing/Tests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/ChooseFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-294">
-          <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3880#3881#0" expanded="true" />
@@ -922,6 +884,48 @@
             <element signature="e#4200#4201#0" expanded="true" />
             <element signature="e#4242#4243#0" expanded="true" />
             <element signature="e#4276#4277#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/Actions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/MusicFileInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="42" column="38" selection-start-line="41" selection-start-column="12" selection-end-line="42" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/MyWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="150" column="70" selection-start-line="150" selection-start-column="70" selection-end-line="150" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createSlider#0;class#MyWindow#0" />
+            <element signature="method#errorStage#0;class#MyWindow#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testing/Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1449">
+          <caret line="69" column="63" lean-forward="true" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

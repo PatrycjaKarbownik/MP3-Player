@@ -81,7 +81,7 @@ public class ChooseFile {
     public static void setFileInUse(Boolean bool){
         fileInUse = bool;
     }
-    
+
     public static Boolean getPauseFlag() {
         return pauseFlag;
     }

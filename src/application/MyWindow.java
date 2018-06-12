@@ -1,5 +1,6 @@
 package application;
 
+import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -26,8 +27,8 @@ public class MyWindow {
     private static Slider balanceSlider;
 
 
-    private String fontStyle = "-fx-font-size: 13; -fx-font-weight: bold;";
-    private String buttonStyle = "-fx-font-size: 12; -fx-background-color: grey; -fx-text-fill: black;";
+    private static String fontStyle = "-fx-font-size: 13; -fx-font-weight: bold;";
+    private static String buttonStyle = "-fx-font-size: 12; -fx-background-color: grey; -fx-text-fill: black;";
     public static final int sizeOfSquare = 30;
 
     MyWindow(Stage primaryStage) {
@@ -37,7 +38,7 @@ public class MyWindow {
 
         Group panel = createGroup();
 
-        Scene scene = new Scene(panel, 16 * sizeOfSquare, 21 * sizeOfSquare, Color.BLACK);
+        Scene scene = new Scene(panel, 16 * sizeOfSquare, 22 * sizeOfSquare, Color.BLACK);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();
@@ -147,10 +148,9 @@ public class MyWindow {
 
         Label volumeLabel = new Label("Volume:");
             volumeLabel.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
-            volumeLabel.relocate(1 * sizeOfSquare, 13 * sizeOfSquare);
-            volumeLabel.setStyle(fontStyle);
+            volumeLabel.relocate(2 * sizeOfSquare, 13 * sizeOfSquare);
             volumeLabel.setTextFill(Color.LIGHTGRAY);
-        volumeSlider = createSlider(3, 1, 4, 13);
+        volumeSlider = createSlider(8, 1, 5, 13);
             volumeSlider.setMin(0);
             volumeSlider.setMax(100);
             volumeSlider.setValue(100);
@@ -167,8 +167,8 @@ public class MyWindow {
         Label balanceLabel = new Label("Balance:");
             balanceLabel.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
             balanceLabel.setTextFill(Color.LIGHTGRAY);
-            balanceLabel.relocate(1 * sizeOfSquare, 15 * sizeOfSquare);
-        balanceSlider = createSlider(3, 1, 4, 15);
+            balanceLabel.relocate(2 * sizeOfSquare, 15 * sizeOfSquare);
+        balanceSlider = createSlider(8, 1, 5, 15);
             balanceSlider.setMin(-100);
             balanceSlider.setMax(100);
 
@@ -177,49 +177,55 @@ public class MyWindow {
 
         Label f64_Label = new Label("64Hz:");
             f64_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
-            f64_Label.relocate(1 * sizeOfSquare, 17 * sizeOfSquare);
+            f64_Label.relocate(2 * sizeOfSquare, 20 * sizeOfSquare);
             f64_Label.setTextFill(Color.LIGHTGRAY);
-        Slider f64_Slider = createSlider(3, 1, 4, 17);
+        Slider f64_Slider = createSlider(2, 3, 2, 17);
+            f64_Slider.setOrientation(Orientation.VERTICAL);
 
         f64_Slider.valueProperty().addListener(e -> Actions.equalizerBandChange(ChooseFile.getPlayer().getAudioEqualizer().getBands().get(1), f64_Slider));
 
         Label f125_Label = new Label("125Hz:");
             f125_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
-            f125_Label.relocate(1 * sizeOfSquare, 19 * sizeOfSquare);
+            f125_Label.relocate(4 * sizeOfSquare, 20 * sizeOfSquare);
             f125_Label.setTextFill(Color.LIGHTGRAY);
-        Slider f125_Slider = createSlider(3, 1, 4, 19);
+        Slider f125_Slider = createSlider(2, 3, 4, 17);
+            f125_Slider.setOrientation(Orientation.VERTICAL);
 
         f125_Slider.valueProperty().addListener(e -> Actions.equalizerBandChange(ChooseFile.getPlayer().getAudioEqualizer().getBands().get(2), f125_Slider));
 
         Label f500_Label = new Label("" + "500Hz:");
             f500_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
-            f500_Label.relocate(9 * sizeOfSquare, 13 * sizeOfSquare);
+            f500_Label.relocate(6 * sizeOfSquare, 20 * sizeOfSquare);
             f500_Label.setTextFill(Color.LIGHTGRAY);
-        Slider f500_Slider = createSlider(3, 1, 12, 13);
+        Slider f500_Slider = createSlider(2, 3, 6, 17);
+            f500_Slider.setOrientation(Orientation.VERTICAL);
 
         f500_Slider.valueProperty().addListener(e -> Actions.equalizerBandChange(ChooseFile.getPlayer().getAudioEqualizer().getBands().get(4), f500_Slider));
 
         Label f1k_Label = new Label("1kHz:");
             f1k_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
-            f1k_Label.relocate(9 * sizeOfSquare, 15 * sizeOfSquare);
+            f1k_Label.relocate(8 * sizeOfSquare, 20 * sizeOfSquare);
             f1k_Label.setTextFill(Color.LIGHTGRAY);
-        Slider f1k_Slider = createSlider(3, 1, 12, 15);
+        Slider f1k_Slider = createSlider(2, 3, 8, 17);
+            f1k_Slider.setOrientation(Orientation.VERTICAL);
 
         f1k_Slider.valueProperty().addListener(e -> Actions.equalizerBandChange(ChooseFile.getPlayer().getAudioEqualizer().getBands().get(5), f1k_Slider));
 
         Label f4k_Label = new Label("4kHz:");
             f4k_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
-            f4k_Label.relocate(9 * sizeOfSquare, 17 * sizeOfSquare);
+            f4k_Label.relocate(10 * sizeOfSquare, 20 * sizeOfSquare);
             f4k_Label.setTextFill(Color.LIGHTGRAY);
-        Slider f4k_Slider = createSlider(3, 1, 12, 17);
+        Slider f4k_Slider = createSlider(2, 3, 10, 17);
+            f4k_Slider.setOrientation(Orientation.VERTICAL);
 
         f4k_Slider.valueProperty().addListener(e -> Actions.equalizerBandChange(ChooseFile.getPlayer().getAudioEqualizer().getBands().get(7), f4k_Slider));
 
         Label f16k_Label = new Label("16kHz:");
             f16k_Label.setPrefSize(3 * sizeOfSquare, 1 * sizeOfSquare);
-            f16k_Label.relocate(9 * sizeOfSquare, 19 * sizeOfSquare);
+            f16k_Label.relocate(12 * sizeOfSquare, 20 * sizeOfSquare);
             f16k_Label.setTextFill(Color.LIGHTGRAY);
-        Slider f16k_Slider = createSlider(3, 1, 12, 19);
+        Slider f16k_Slider = createSlider(2, 3, 12, 17);
+            f16k_Slider.setOrientation(Orientation.VERTICAL);
 
         f16k_Slider.valueProperty().addListener(e -> Actions.equalizerBandChange(ChooseFile.getPlayer().getAudioEqualizer().getBands().get(9), f16k_Slider));
 
@@ -272,8 +278,6 @@ public class MyWindow {
         errorStage.setResizable(false);
         errorStage.setAlwaysOnTop(true);
         errorStage.setMaximized(false);
-        //errorStage.setMaxHeight(7 * MyWindow.sizeOfSquare);
-        // errorStage.setMaxWidth(5 * MyWindow.sizeOfSquare);
 
         Group panel = new Group();
         Label error = new Label(text);
@@ -281,9 +285,11 @@ public class MyWindow {
         error.relocate(2 * sizeOfSquare, 1 * MyWindow.sizeOfSquare);
         error.setPrefSize(3 * sizeOfSquare, 3 * sizeOfSquare);
         error.setTextAlignment(TextAlignment.CENTER);
+        error.setStyle(fontStyle);
+        error.setTextFill(Color.RED);
         panel.getChildren().add(error);
 
-        Scene scene = new Scene(panel, 7 * sizeOfSquare, 5 * sizeOfSquare);
+        Scene scene = new Scene(panel, 7 * sizeOfSquare, 5 * sizeOfSquare, Color.BLACK);
 
 
         errorStage.setScene(scene);

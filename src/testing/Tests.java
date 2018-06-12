@@ -60,13 +60,14 @@ public class Tests {
 
     @Test
     public void testHasID3Tag() throws InvalidDataException, IOException, UnsupportedTagException {
-        Mp3File mp3File = new Mp3File("src\\data\\Thousand Foot Krutch  Light Up The Sky (Official Audio).mp3");
-        assertEquals(true, mp3File.hasId3v2Tag());
+        Mp3File mp3File = new Mp3File("src\\data\\02 Weak Fantasy.mp3");
+        assertEquals(true, mp3File.hasId3v1Tag());
     }
 
     @Test
     public void testID3TagRead() {
-        File file = new File("src\\data\\Thousand Foot Krutch  Light Up The Sky (Official Audio).mp3");
+       // File file = new File("src\\data\\Thousand Foot Krutch  Light Up The Sky (Official Audio).mp3");
+        File file = new File("src\\data\\02 Weak Fantasy.mp3");
         String title = new String();
         try {
             int size = (int)file.length();
@@ -78,13 +79,13 @@ public class Tests {
 
             System.out.println(id3);
 
-            title = id3.substring(3, 19);
+            title = id3.substring(3, 15);
             in.close();
         } catch(Exception e) {
             System.out.println("Blad w tescie 'ID3TagRead' - " + e.toString());
         }
         System.out.print(title);
-        Assert.assertEquals("Light Up The Sky", title);
+        Assert.assertEquals("Weak Fantasy", title);
     }
 
 }
