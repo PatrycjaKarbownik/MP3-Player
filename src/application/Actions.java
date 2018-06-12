@@ -66,6 +66,7 @@ public class Actions {
             } else {
                 Media pick = new Media(ChooseFile.getAudioFile());
                 ChooseFile.setPlayer(new MediaPlayer(pick));// = new MediaPlayer(pick);
+                System.out.println("halo");
                 playFunction();
             }
 
@@ -77,7 +78,7 @@ public class Actions {
         }
     }
 
-    private static void playFunction() {
+    /*private*/ public static void playFunction() {
         System.out.println("play function");
             if(ChooseFile.getPlayer().getStatus() != MediaPlayer.Status.PLAYING){
                 if (ChooseFile.getPauseFlag() == true) {
@@ -93,6 +94,7 @@ public class Actions {
                 });
                 playThread.start();
             }
+      //  System.out.println(ChooseFile.getPlayer().getStatus());
     }
 
     public static void pauseMusic() {
