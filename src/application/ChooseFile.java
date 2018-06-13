@@ -24,20 +24,32 @@ public class ChooseFile {
     private static String album;
     private static String trackLength;
 
+    public static boolean wait = false;
+
     public ChooseFile() {
         try{
-            chooseFile();
+            chooseFile(true, null);
         } catch (Exception e){
             System.out.println("Error in ChooseFile class constructor: " + e);
         }
     }
 
 
-    public static void chooseFile() throws MalformedURLException {
-        FileChooser chooser = new FileChooser();
-        FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("Select your mp3 file", "*.mp3");
+    public static void chooseFile(boolean one, String filepath) throws MalformedURLException {
+        if(one) {
+            FileChooser chooser = new FileChooser();
+            FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("Select your mp3 file", "*.mp3");
             chooser.getExtensionFilters().add(filter);
-        file = chooser.showOpenDialog(Main.getPrimaryStage());
+            file = chooser.showOpenDialog(Main.getPrimaryStage());
+        } else {
+          //  System.out.println(filepath);
+          //  filepath = filepath.replace("\\", "/").replaceAll(" ", "%20");
+            file = new File(filepath);
+            wait = true;
+        }
+
+     //   System.out.println("wybieram plik");
+
         filePath = file.getPath();
 
         // jesli muzyka jest odtwarzana, a uzytkownik wybierze nowy utwor, obecny nalezy przerwac
@@ -59,6 +71,8 @@ public class ChooseFile {
             fileName = "Wybrano zly plik! Sprobuj jeszcze raz";
             audioFile = null;
         }
+
+      //  System.out.println("wybralem plik");
     }
 
 

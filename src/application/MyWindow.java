@@ -27,7 +27,8 @@ public class MyWindow {
     private static ComboBox comboBox;
     private static TextField playlistName;
     private static Stage newPlaylistNameSt;
-    private static Stage playlistSelection;
+    private static Stage playlistSelectionToAdd;
+    private static Stage playlistSelectionToPlay;
 
     private static String fontStyle = "-fx-font-size: 13; -fx-font-weight: bold;";
     private static String buttonStyle = "-fx-font-size: 12; -fx-background-color: grey; -fx-text-fill: black;";
@@ -103,7 +104,7 @@ public class MyWindow {
 
         chooseButton.setOnAction(e -> {
             try {
-                Actions.openFile();
+                Actions.openFile(true, null);
             } catch (NullPointerException | MalformedURLException e1) {
                 System.out.println("Blad w openFile: " + e);
 
@@ -145,7 +146,7 @@ public class MyWindow {
             openPlaylistButton.relocate(11 * sizeOfSquare, 11 * sizeOfSquare);
             openPlaylistButton.setStyle(buttonStyle);
 
-        openPlaylistButton.setOnAction(e -> Actions.openPlaylistFunction());
+        openPlaylistButton.setOnAction(e -> playlistSelectionToPlayStage());
 
 
         Label volumeLabel = new Label("Volume:");
@@ -300,12 +301,12 @@ public class MyWindow {
         return errorStage;
     }
 
-    public static Stage playlistSelectionStage(){
-        playlistSelection = new Stage();
-        playlistSelection.setTitle("Add to playlist");
-        playlistSelection.setResizable(false);
-        playlistSelection.setAlwaysOnTop(true);
-        playlistSelection.setMaximized(false);
+    public static Stage playlistSelectionStageToAdd(){
+        playlistSelectionToAdd = new Stage();
+        playlistSelectionToAdd.setTitle("Add to playlist");
+        playlistSelectionToAdd.setResizable(false);
+        playlistSelectionToAdd.setAlwaysOnTop(true);
+        playlistSelectionToAdd.setMaximized(false);
 
         Group panel = new Group();
         Label info = new Label("Choose playlist or creat a new one");
@@ -315,11 +316,7 @@ public class MyWindow {
             info.setTextAlignment(TextAlignment.CENTER);
             info.setTextFill(Color.LIGHTGRAY);
 
-
-
-        comboBox = createComboBox();
-
-
+        comboBox = createComboBox(true);
 
         Button okButton = new Button("OK");
             okButton.setPrefSize(2 * sizeOfSquare, 1 * sizeOfSquare);
@@ -333,7 +330,7 @@ public class MyWindow {
             cancelButton.relocate(1 * sizeOfSquare, 6 * sizeOfSquare);
             cancelButton.setStyle(buttonStyle);
 
-        cancelButton.setOnAction(e -> playlistSelection.close());
+        cancelButton.setOnAction(e -> playlistSelectionToAdd.close());
 
 
         panel.getChildren().add(info);
@@ -343,21 +340,23 @@ public class MyWindow {
 
         Scene scene = new Scene(panel, 8 * sizeOfSquare, 8 * sizeOfSquare, Color.BLACK);
 
-        playlistSelection.setScene(scene);
-        playlistSelection.show();
+        playlistSelectionToAdd.setScene(scene);
+        playlistSelectionToAdd.show();
 
-        return playlistSelection;
+        return playlistSelectionToAdd;
     }
 
-    private static ComboBox createComboBox(){
+    private static ComboBox createComboBox(boolean create){
         ComboBox comboBox = new ComboBox();
         comboBox.relocate(1 * sizeOfSquare, 4 * sizeOfSquare);
         comboBox.setPrefSize(6 * sizeOfSquare, 1 * sizeOfSquare);
         comboBox.setStyle(buttonStyle);
         comboBox.setVisibleRowCount(5);
 
-        comboBox.getItems().add("<create a new playlist>");
-        comboBox.setValue("<create a new playlist>");
+        if(create) {
+            comboBox.getItems().add("<create a new playlist>");
+            comboBox.setValue("<create a new playlist>");
+        }
 
         PlaylistFolder folder = new PlaylistFolder();
 
@@ -415,6 +414,50 @@ public class MyWindow {
         newPlaylistNameSt.show();
 
         return newPlaylistNameSt;
+    }
+
+    public static Stage playlistSelectionToPlayStage() {
+        playlistSelectionToPlay = new Stage();
+        playlistSelectionToPlay.setTitle("Choose playlist");
+        playlistSelectionToPlay.setResizable(false);
+        playlistSelectionToPlay.setAlwaysOnTop(true);
+        playlistSelectionToPlay.setMaximized(false);
+
+        Group panel = new Group();
+        Label info = new Label("Choose playlist");
+        info.setWrapText(true);
+        info.relocate(2 * sizeOfSquare, 1 * MyWindow.sizeOfSquare);
+        info.setPrefSize(4 * sizeOfSquare, 2 * sizeOfSquare);
+        info.setTextAlignment(TextAlignment.CENTER);
+        info.setTextFill(Color.LIGHTGRAY);
+
+        comboBox = createComboBox(false);
+
+        Button okButton = new Button("OK");
+        okButton.setPrefSize(2 * sizeOfSquare, 1 * sizeOfSquare);
+        okButton.relocate(5 * sizeOfSquare, 6 * sizeOfSquare);
+        okButton.setStyle(buttonStyle);
+
+        okButton.setOnAction(e -> Actions.openPlaylistFunction());
+
+        Button cancelButton = new Button("Cancel");
+        cancelButton.setPrefSize(2 * sizeOfSquare, 1 * sizeOfSquare);
+        cancelButton.relocate(1 * sizeOfSquare, 6 * sizeOfSquare);
+        cancelButton.setStyle(buttonStyle);
+
+            cancelButton.setOnAction(e -> playlistSelectionToPlay.close());
+
+        panel.getChildren().add(info);
+        panel.getChildren().add(comboBox);
+        panel.getChildren().add(okButton);
+        panel.getChildren().add(cancelButton);
+
+        Scene scene = new Scene(panel, 8 * sizeOfSquare, 8 * sizeOfSquare, Color.BLACK);
+
+        playlistSelectionToPlay.setScene(scene);
+        playlistSelectionToPlay.show();
+
+        return playlistSelectionToPlay;
     }
 
     public static Label getNowPlayingLabel() {
@@ -505,7 +548,11 @@ public class MyWindow {
         return newPlaylistNameSt;
     }
 
-    public static Stage getPlaylistSelectionStage(){
-        return playlistSelection;
+    public static Stage getPlaylistSelectionToAddStage(){
+        return playlistSelectionToAdd;
+    }
+
+    public static Stage getPlaylistSelectionToPlayStage(){
+        return playlistSelectionToPlay;
     }
 }

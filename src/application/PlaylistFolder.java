@@ -7,7 +7,7 @@ import java.util.List;
 
 public class PlaylistFolder {
 
-    private String path = "src\\data\\playlists";
+    private static String path = "src\\data\\playlists";
     private static List<String> fileNamesList;
     private File directory;
 
@@ -53,5 +53,9 @@ public class PlaylistFolder {
 
     public static List<String> getFileNamesList() {
         return fileNamesList;
+    }
+
+    public static String getPath() {
+        return path;
     }
 }
