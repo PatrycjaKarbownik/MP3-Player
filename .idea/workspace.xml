@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e4fe393-9794-4e12-a1eb-f86ff3ff7b68" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/NotDirectoryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/PlaylistFolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyMP3Player/application/MyWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyMP3Player/application/MyWindow.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Actions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/MyWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/MyWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/PlaylistFolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/PlaylistFolder.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,16 +28,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyWindow.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/application/MyWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="359" selection-start-line="359" selection-end-line="359" />
+            <state relative-caret-position="320">
+              <caret line="343" column="46" lean-forward="true" selection-start-line="343" selection-start-column="46" selection-end-line="343" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#createGroup#0;class#MyWindow#0" />
                 <element signature="method#createSlider#0;class#MyWindow#0" />
                 <element signature="method#errorStage#0;class#MyWindow#0" />
+                <element signature="method#createComboBox#0;class#MyWindow#0" />
                 <element signature="e#14121#14122#0" expanded="true" />
                 <element signature="e#14154#14155#0" expanded="true" />
                 <element signature="e#14212#14213#0" expanded="true" />
@@ -79,18 +75,42 @@
                 <element signature="e#15588#15589#0" expanded="true" />
                 <element signature="e#15634#15635#0" expanded="true" />
                 <element signature="e#15681#15682#0" expanded="true" />
+                <element signature="e#16677#16678#0" expanded="true" />
+                <element signature="e#16708#16709#0" expanded="true" />
+                <element signature="e#16762#16763#0" expanded="true" />
+                <element signature="e#16791#16792#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlaylistFolder.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/application/PlaylistFolder.java">
+      <file leaf-file-name="Actions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/Actions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+            <state relative-caret-position="467">
+              <caret line="157" column="49" selection-start-line="157" selection-start-column="49" selection-end-line="157" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5079#5080#0" expanded="true" />
+                <element signature="e#5121#5122#0" expanded="true" />
+                <element signature="e#4906#4907#0" expanded="true" />
+                <element signature="e#4957#4958#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlaylistFolder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/PlaylistFolder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1287#1288#0" expanded="true" />
+                <element signature="e#1319#1320#0" expanded="true" />
+                <element signature="e#1372#1373#0" expanded="true" />
+                <element signature="e#1408#1409#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,18 +130,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="21">
               <caret line="83" selection-start-line="83" selection-end-line="83" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Actions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/Actions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="130" column="8" selection-start-line="130" selection-start-column="8" selection-end-line="130" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -182,10 +190,10 @@
         <option value="$PROJECT_DIR$/src/main/com/mpatric/mp3agic/AbstractID3v2Tag.java" />
         <option value="$PROJECT_DIR$/src/application/ChooseFile.java" />
         <option value="$PROJECT_DIR$/src/testing/Tests.java" />
-        <option value="$PROJECT_DIR$/src/application/Actions.java" />
         <option value="$PROJECT_DIR$/src/application/NotDirectioryException.java" />
-        <option value="$PROJECT_DIR$/src/application/MyWindow.java" />
         <option value="$PROJECT_DIR$/src/application/PlaylistFolder.java" />
+        <option value="$PROJECT_DIR$/src/application/Actions.java" />
+        <option value="$PROJECT_DIR$/src/application/MyWindow.java" />
       </list>
     </option>
   </component>
@@ -198,7 +206,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -378,7 +386,7 @@
       <workItem from="1528800120529" duration="1337000" />
       <workItem from="1528806276775" duration="330000" />
       <workItem from="1528806831101" duration="14774000" />
-      <workItem from="1528883372048" duration="5225000" />
+      <workItem from="1528883372048" duration="8722000" />
     </task>
     <servers />
   </component>
@@ -415,10 +423,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78698000" />
+    <option name="totallyTimeSpent" value="82195000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
@@ -507,6 +515,7 @@
             <element signature="method#createGroup#0;class#MyWindow#0" />
             <element signature="method#createSlider#0;class#MyWindow#0" />
             <element signature="method#errorStage#0;class#MyWindow#0" />
+            <element signature="method#createComboBox#0;class#MyWindow#0" />
             <element signature="e#14121#14122#0" expanded="true" />
             <element signature="e#14154#14155#0" expanded="true" />
             <element signature="e#14212#14213#0" expanded="true" />
@@ -543,6 +552,10 @@
             <element signature="e#15588#15589#0" expanded="true" />
             <element signature="e#15634#15635#0" expanded="true" />
             <element signature="e#15681#15682#0" expanded="true" />
+            <element signature="e#16677#16678#0" expanded="true" />
+            <element signature="e#16708#16709#0" expanded="true" />
+            <element signature="e#16762#16763#0" expanded="true" />
+            <element signature="e#16791#16792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -553,6 +566,10 @@
           <caret line="106" column="45" selection-start-line="106" selection-start-column="45" selection-end-line="106" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5079#5080#0" expanded="true" />
+            <element signature="e#5121#5122#0" expanded="true" />
+            <element signature="e#4906#4907#0" expanded="true" />
+            <element signature="e#4957#4958#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -616,6 +633,7 @@
             <element signature="method#createGroup#0;class#MyWindow#0" />
             <element signature="method#createSlider#0;class#MyWindow#0" />
             <element signature="method#errorStage#0;class#MyWindow#0" />
+            <element signature="method#createComboBox#0;class#MyWindow#0" />
             <element signature="e#14121#14122#0" expanded="true" />
             <element signature="e#14154#14155#0" expanded="true" />
             <element signature="e#14212#14213#0" expanded="true" />
@@ -652,6 +670,10 @@
             <element signature="e#15588#15589#0" expanded="true" />
             <element signature="e#15634#15635#0" expanded="true" />
             <element signature="e#15681#15682#0" expanded="true" />
+            <element signature="e#16677#16678#0" expanded="true" />
+            <element signature="e#16708#16709#0" expanded="true" />
+            <element signature="e#16762#16763#0" expanded="true" />
+            <element signature="e#16791#16792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -662,6 +684,10 @@
           <caret line="88" column="34" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5079#5080#0" expanded="true" />
+            <element signature="e#5121#5122#0" expanded="true" />
+            <element signature="e#4906#4907#0" expanded="true" />
+            <element signature="e#4957#4958#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -712,6 +738,10 @@
           <caret line="47" column="20" lean-forward="true" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5079#5080#0" expanded="true" />
+            <element signature="e#5121#5122#0" expanded="true" />
+            <element signature="e#4906#4907#0" expanded="true" />
+            <element signature="e#4957#4958#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -755,6 +785,7 @@
             <element signature="method#createGroup#0;class#MyWindow#0" />
             <element signature="method#createSlider#0;class#MyWindow#0" />
             <element signature="method#errorStage#0;class#MyWindow#0" />
+            <element signature="method#createComboBox#0;class#MyWindow#0" />
             <element signature="e#14121#14122#0" expanded="true" />
             <element signature="e#14154#14155#0" expanded="true" />
             <element signature="e#14212#14213#0" expanded="true" />
@@ -791,6 +822,10 @@
             <element signature="e#15588#15589#0" expanded="true" />
             <element signature="e#15634#15635#0" expanded="true" />
             <element signature="e#15681#15682#0" expanded="true" />
+            <element signature="e#16677#16678#0" expanded="true" />
+            <element signature="e#16708#16709#0" expanded="true" />
+            <element signature="e#16762#16763#0" expanded="true" />
+            <element signature="e#16791#16792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -990,16 +1025,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Actions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="130" column="8" selection-start-line="130" selection-start-column="8" selection-end-line="130" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/NotDirectoryException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1007,15 +1032,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/ChooseFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/PlaylistFolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1287#1288#0" expanded="true" />
+            <element signature="e#1319#1320#0" expanded="true" />
+            <element signature="e#1372#1373#0" expanded="true" />
+            <element signature="e#1408#1409#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/Actions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="157" column="49" selection-start-line="157" selection-start-column="49" selection-end-line="157" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5079#5080#0" expanded="true" />
+            <element signature="e#5121#5122#0" expanded="true" />
+            <element signature="e#4906#4907#0" expanded="true" />
+            <element signature="e#4957#4958#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/MyWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="359" selection-start-line="359" selection-end-line="359" />
+        <state relative-caret-position="320">
+          <caret line="343" column="46" lean-forward="true" selection-start-line="343" selection-start-column="46" selection-end-line="343" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createGroup#0;class#MyWindow#0" />
             <element signature="method#createSlider#0;class#MyWindow#0" />
             <element signature="method#errorStage#0;class#MyWindow#0" />
+            <element signature="method#createComboBox#0;class#MyWindow#0" />
             <element signature="e#14121#14122#0" expanded="true" />
             <element signature="e#14154#14155#0" expanded="true" />
             <element signature="e#14212#14213#0" expanded="true" />
@@ -1052,26 +1116,10 @@
             <element signature="e#15588#15589#0" expanded="true" />
             <element signature="e#15634#15635#0" expanded="true" />
             <element signature="e#15681#15682#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/ChooseFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/PlaylistFolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#16677#16678#0" expanded="true" />
+            <element signature="e#16708#16709#0" expanded="true" />
+            <element signature="e#16762#16763#0" expanded="true" />
+            <element signature="e#16791#16792#0" expanded="true" />
           </folding>
         </state>
       </provider>

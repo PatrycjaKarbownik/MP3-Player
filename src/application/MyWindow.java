@@ -27,8 +27,7 @@ public class MyWindow {
     private static Label length;
     private static Slider volumeSlider;
     private static Slider balanceSlider;
-    PlaylistFolder folder = new PlaylistFolder();
-
+    private static ComboBox comboBox;
 
     private static String fontStyle = "-fx-font-size: 13; -fx-font-weight: bold;";
     private static String buttonStyle = "-fx-font-size: 12; -fx-background-color: grey; -fx-text-fill: black;";
@@ -320,7 +319,7 @@ public class MyWindow {
 
 
 
-        final ComboBox comboBox = createComboBox();
+        comboBox = createComboBox();
 
 
 
@@ -331,10 +330,18 @@ public class MyWindow {
 
             okButton.setOnAction(e -> Actions.addToPlaylistFunction());
 
+        Button cancelButton = new Button("Cancel");
+        cancelButton.setPrefSize(2 * sizeOfSquare, 1 * sizeOfSquare);
+        cancelButton.relocate(1 * sizeOfSquare, 6 * sizeOfSquare);
+        cancelButton.setStyle(buttonStyle);
+
+        cancelButton.setOnAction(e -> infoStage.close());
+
 
         panel.getChildren().add(info);
         panel.getChildren().add(comboBox);
         panel.getChildren().add(okButton);
+        panel.getChildren().add(cancelButton);
 
         Scene scene = new Scene(panel, 8 * sizeOfSquare, 8 * sizeOfSquare, Color.BLACK);
 
@@ -354,14 +361,61 @@ public class MyWindow {
         comboBox.getItems().add("<create a new playlist>");
         comboBox.setValue("<create a new playlist>");
 
+        PlaylistFolder folder = new PlaylistFolder();
         comboBox.getItems().add(PlaylistFolder.getFileNamesList());
-
-
-
 
         return comboBox;
     }
 
+    public static Stage playlistNameStage() {
+        Stage playlistNameSt = new Stage();
+        playlistNameSt.setTitle("Set name of playlist");
+        playlistNameSt.setResizable(false);
+        playlistNameSt.setAlwaysOnTop(true);
+        playlistNameSt.setMaximized(false);
+
+        Group panel = new Group();
+        Label text = new Label("Set name of playlist");
+        text.setWrapText(true);
+        text.relocate(1 * sizeOfSquare, 1 * MyWindow.sizeOfSquare);
+        text.setPrefSize(4 * sizeOfSquare, 2 * sizeOfSquare);
+        text.setTextAlignment(TextAlignment.CENTER);
+        text.setTextFill(Color.LIGHTGRAY);
+
+        TextField name = new TextField();
+        name.relocate(1 * sizeOfSquare, 3 * sizeOfSquare);
+        name.setPrefSize(5 * sizeOfSquare, 1 * sizeOfSquare);
+        name.setStyle(buttonStyle);
+        //text.setTextFill(Color.LIGHTGRAY);
+
+
+        Button okButton = new Button("OK");
+            okButton.setPrefSize(2 * sizeOfSquare, 1 * sizeOfSquare);
+            okButton.relocate(4 * sizeOfSquare, 5 * sizeOfSquare);
+            okButton.setStyle(buttonStyle);
+
+        okButton.setOnAction(e -> Actions.createNewPlaylist());
+
+        Button cancelButton = new Button("Cancel");
+        cancelButton.setPrefSize(2 * sizeOfSquare, 1 * sizeOfSquare);
+        cancelButton.relocate(1 * sizeOfSquare, 5 * sizeOfSquare);
+        cancelButton.setStyle(buttonStyle);
+
+        cancelButton.setOnAction(e -> playlistNameSt.close());
+
+
+        panel.getChildren().add(text);
+        panel.getChildren().add(name);
+        panel.getChildren().add(okButton);
+        panel.getChildren().add(cancelButton);
+
+        Scene scene = new Scene(panel, 7 * sizeOfSquare, 7 * sizeOfSquare, Color.BLACK);
+
+        playlistNameSt.setScene(scene);
+        playlistNameSt.show();
+
+        return playlistNameSt;
+    }
 
     public static Label getNowPlayingLabel() {
         return nowPlaying;
@@ -433,6 +487,14 @@ public class MyWindow {
 
     public static double getBalanceSlider(){
         return balanceSlider.getValue();
+    }
+
+    public static ComboBox getComboBox() {
+        return comboBox;
+    }
+
+    public static void setComboBox(ComboBox cb){
+        comboBox = cb;
     }
 
 }

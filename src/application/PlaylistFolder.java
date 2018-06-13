@@ -39,7 +39,7 @@ public class PlaylistFolder {
         for (int i = 0; i < size; ++i) {
             String name = list[i].substring(0, list[i].length() - 4);
             fileNamesList.add(name);
-            
+
             System.out.println(list[i]);
             System.out.println(name);
         }

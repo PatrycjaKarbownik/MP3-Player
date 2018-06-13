@@ -142,8 +142,22 @@ public class Actions {
     public static void addToPlaylistFunction() {
         System.out.println("add to playlist");
 
+        if(MyWindow.getComboBox().getValue().toString() == "<create a new playlist>"){
+            MyWindow.playlistNameStage();
+            //create a new txt-file
+        }
+        else {
+            //open a txt-file
+        }
+
+        //add path to file
 
     }
+
+    public static void createNewPlaylist() {
+        System.out.println("create a new playlist");
+    }
+
 
     public static void openPlaylistFunction() {
         System.out.println("open playlist");
