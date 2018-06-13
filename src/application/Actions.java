@@ -124,8 +124,25 @@ public class Actions {
         }
     }
 
+    public static void addToPlaylist() {
+        System.out.println("playlist selection");
+
+        try {
+      //      String path = new String(ChooseFile.getFilePath());
+            MyWindow.playlistSelectionStage();
+        }
+        catch (NullPointerException e) {
+            System.out.println("Blad w addToPlaylist: " + e);
+
+            MyWindow.errorStage("Cannot add track. File not chosen.");
+        }
+
+    }
+
     public static void addToPlaylistFunction() {
         System.out.println("add to playlist");
+
+
     }
 
     public static void openPlaylistFunction() {

@@ -1,5 +1,7 @@
 package application;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
@@ -25,10 +27,12 @@ public class MyWindow {
     private static Label length;
     private static Slider volumeSlider;
     private static Slider balanceSlider;
+    PlaylistFolder folder = new PlaylistFolder();
 
 
     private static String fontStyle = "-fx-font-size: 13; -fx-font-weight: bold;";
     private static String buttonStyle = "-fx-font-size: 12; -fx-background-color: grey; -fx-text-fill: black;";
+    private static String comboBoxStyle = "-fx-font-size: 12; -fx-background-color: black; -fx-text-fill: white;";
     public static final int sizeOfSquare = 30;
 
     MyWindow(Stage primaryStage) {
@@ -122,7 +126,7 @@ public class MyWindow {
             addToPlaylistButton.relocate(11 * sizeOfSquare, 9 * sizeOfSquare);
             addToPlaylistButton.setStyle(buttonStyle);
 
-        addToPlaylistButton.setOnAction(e -> Actions.addToPlaylistFunction());
+        addToPlaylistButton.setOnAction(e -> Actions.addToPlaylist());
 
         Button stopButton = new Button("STOP");
             stopButton.setPrefSize(4 * sizeOfSquare, 1 * sizeOfSquare);
@@ -297,6 +301,67 @@ public class MyWindow {
 
         return errorStage;
     }
+
+    public static Stage playlistSelectionStage(){
+        Stage infoStage = new Stage();
+        infoStage.setTitle("Add to playlist");
+        infoStage.setResizable(false);
+        infoStage.setAlwaysOnTop(true);
+        infoStage.setMaximized(false);
+
+        Group panel = new Group();
+        Label info = new Label("Choose playlist or creat a new one");
+            info.setWrapText(true);
+            info.relocate(2 * sizeOfSquare, 1 * MyWindow.sizeOfSquare);
+            info.setPrefSize(4 * sizeOfSquare, 2 * sizeOfSquare);
+            info.setTextAlignment(TextAlignment.CENTER);
+           // info.setStyle(fontStyle);
+            info.setTextFill(Color.LIGHTGRAY);
+
+
+
+        final ComboBox comboBox = createComboBox();
+
+
+
+        Button okButton = new Button("OK");
+            okButton.setPrefSize(2 * sizeOfSquare, 1 * sizeOfSquare);
+            okButton.relocate(5 * sizeOfSquare, 6 * sizeOfSquare);
+            okButton.setStyle(buttonStyle);
+
+            okButton.setOnAction(e -> Actions.addToPlaylistFunction());
+
+
+        panel.getChildren().add(info);
+        panel.getChildren().add(comboBox);
+        panel.getChildren().add(okButton);
+
+        Scene scene = new Scene(panel, 8 * sizeOfSquare, 8 * sizeOfSquare, Color.BLACK);
+
+        infoStage.setScene(scene);
+        infoStage.show();
+
+        return infoStage;
+    }
+
+    private static ComboBox createComboBox(){
+        ComboBox comboBox = new ComboBox();
+        comboBox.relocate(1 * sizeOfSquare, 4 * sizeOfSquare);
+        comboBox.setPrefSize(6 * sizeOfSquare, 1 * sizeOfSquare);
+        comboBox.setStyle(buttonStyle);
+        comboBox.setVisibleRowCount(3);
+
+        comboBox.getItems().add("<create a new playlist>");
+        comboBox.setValue("<create a new playlist>");
+
+        comboBox.getItems().add(PlaylistFolder.getFileNamesList());
+
+
+
+
+        return comboBox;
+    }
+
 
     public static Label getNowPlayingLabel() {
         return nowPlaying;
