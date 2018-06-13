@@ -40,8 +40,8 @@ public class PlaylistFolder {
             String name = list[i].substring(0, list[i].length() - 4);
             fileNamesList.add(name);
 
-            System.out.println(list[i]);
-            System.out.println(name);
+          //  System.out.println(list[i]);
+          //  System.out.println(name);
         }
 
         return fileNamesList;

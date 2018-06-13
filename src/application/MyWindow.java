@@ -1,9 +1,6 @@
 package application;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.geometry.Orientation;
-import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -28,10 +25,12 @@ public class MyWindow {
     private static Slider volumeSlider;
     private static Slider balanceSlider;
     private static ComboBox comboBox;
+    private static TextField playlistName;
+    private static Stage newPlaylistNameSt;
+    private static Stage playlistSelection;
 
     private static String fontStyle = "-fx-font-size: 13; -fx-font-weight: bold;";
     private static String buttonStyle = "-fx-font-size: 12; -fx-background-color: grey; -fx-text-fill: black;";
-    private static String comboBoxStyle = "-fx-font-size: 12; -fx-background-color: black; -fx-text-fill: white;";
     public static final int sizeOfSquare = 30;
 
     MyWindow(Stage primaryStage) {
@@ -302,11 +301,11 @@ public class MyWindow {
     }
 
     public static Stage playlistSelectionStage(){
-        Stage infoStage = new Stage();
-        infoStage.setTitle("Add to playlist");
-        infoStage.setResizable(false);
-        infoStage.setAlwaysOnTop(true);
-        infoStage.setMaximized(false);
+        playlistSelection = new Stage();
+        playlistSelection.setTitle("Add to playlist");
+        playlistSelection.setResizable(false);
+        playlistSelection.setAlwaysOnTop(true);
+        playlistSelection.setMaximized(false);
 
         Group panel = new Group();
         Label info = new Label("Choose playlist or creat a new one");
@@ -314,7 +313,6 @@ public class MyWindow {
             info.relocate(2 * sizeOfSquare, 1 * MyWindow.sizeOfSquare);
             info.setPrefSize(4 * sizeOfSquare, 2 * sizeOfSquare);
             info.setTextAlignment(TextAlignment.CENTER);
-           // info.setStyle(fontStyle);
             info.setTextFill(Color.LIGHTGRAY);
 
 
@@ -331,11 +329,11 @@ public class MyWindow {
             okButton.setOnAction(e -> Actions.addToPlaylistFunction());
 
         Button cancelButton = new Button("Cancel");
-        cancelButton.setPrefSize(2 * sizeOfSquare, 1 * sizeOfSquare);
-        cancelButton.relocate(1 * sizeOfSquare, 6 * sizeOfSquare);
-        cancelButton.setStyle(buttonStyle);
+            cancelButton.setPrefSize(2 * sizeOfSquare, 1 * sizeOfSquare);
+            cancelButton.relocate(1 * sizeOfSquare, 6 * sizeOfSquare);
+            cancelButton.setStyle(buttonStyle);
 
-        cancelButton.setOnAction(e -> infoStage.close());
+        cancelButton.setOnAction(e -> playlistSelection.close());
 
 
         panel.getChildren().add(info);
@@ -345,10 +343,10 @@ public class MyWindow {
 
         Scene scene = new Scene(panel, 8 * sizeOfSquare, 8 * sizeOfSquare, Color.BLACK);
 
-        infoStage.setScene(scene);
-        infoStage.show();
+        playlistSelection.setScene(scene);
+        playlistSelection.show();
 
-        return infoStage;
+        return playlistSelection;
     }
 
     private static ComboBox createComboBox(){
@@ -356,23 +354,26 @@ public class MyWindow {
         comboBox.relocate(1 * sizeOfSquare, 4 * sizeOfSquare);
         comboBox.setPrefSize(6 * sizeOfSquare, 1 * sizeOfSquare);
         comboBox.setStyle(buttonStyle);
-        comboBox.setVisibleRowCount(3);
+        comboBox.setVisibleRowCount(5);
 
         comboBox.getItems().add("<create a new playlist>");
         comboBox.setValue("<create a new playlist>");
 
         PlaylistFolder folder = new PlaylistFolder();
-        comboBox.getItems().add(PlaylistFolder.getFileNamesList());
+
+        for (String name:PlaylistFolder.getFileNamesList()) {
+            comboBox.getItems().add(name);
+        }
 
         return comboBox;
     }
 
-    public static Stage playlistNameStage() {
-        Stage playlistNameSt = new Stage();
-        playlistNameSt.setTitle("Set name of playlist");
-        playlistNameSt.setResizable(false);
-        playlistNameSt.setAlwaysOnTop(true);
-        playlistNameSt.setMaximized(false);
+    public static Stage newPlaylistNameStage() {
+        newPlaylistNameSt = new Stage();
+        newPlaylistNameSt.setTitle("Set name of playlist");
+        newPlaylistNameSt.setResizable(false);
+        newPlaylistNameSt.setAlwaysOnTop(true);
+        newPlaylistNameSt.setMaximized(false);
 
         Group panel = new Group();
         Label text = new Label("Set name of playlist");
@@ -382,11 +383,10 @@ public class MyWindow {
         text.setTextAlignment(TextAlignment.CENTER);
         text.setTextFill(Color.LIGHTGRAY);
 
-        TextField name = new TextField();
-        name.relocate(1 * sizeOfSquare, 3 * sizeOfSquare);
-        name.setPrefSize(5 * sizeOfSquare, 1 * sizeOfSquare);
-        name.setStyle(buttonStyle);
-        //text.setTextFill(Color.LIGHTGRAY);
+        playlistName = new TextField();
+        playlistName.relocate(1 * sizeOfSquare, 3 * sizeOfSquare);
+        playlistName.setPrefSize(5 * sizeOfSquare, 1 * sizeOfSquare);
+        playlistName.setStyle(buttonStyle);
 
 
         Button okButton = new Button("OK");
@@ -401,20 +401,20 @@ public class MyWindow {
         cancelButton.relocate(1 * sizeOfSquare, 5 * sizeOfSquare);
         cancelButton.setStyle(buttonStyle);
 
-        cancelButton.setOnAction(e -> playlistNameSt.close());
+        cancelButton.setOnAction(e -> newPlaylistNameSt.close());
 
 
         panel.getChildren().add(text);
-        panel.getChildren().add(name);
+        panel.getChildren().add(playlistName);
         panel.getChildren().add(okButton);
         panel.getChildren().add(cancelButton);
 
         Scene scene = new Scene(panel, 7 * sizeOfSquare, 7 * sizeOfSquare, Color.BLACK);
 
-        playlistNameSt.setScene(scene);
-        playlistNameSt.show();
+        newPlaylistNameSt.setScene(scene);
+        newPlaylistNameSt.show();
 
-        return playlistNameSt;
+        return newPlaylistNameSt;
     }
 
     public static Label getNowPlayingLabel() {
@@ -497,4 +497,15 @@ public class MyWindow {
         comboBox = cb;
     }
 
+    public static TextField getPlaylistName() {
+        return playlistName;
+    }
+
+    public static Stage getNewPlaylistNameSt() {
+        return newPlaylistNameSt;
+    }
+
+    public static Stage getPlaylistSelectionStage(){
+        return playlistSelection;
+    }
 }
