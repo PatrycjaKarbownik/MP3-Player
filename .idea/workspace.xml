@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e4fe393-9794-4e12-a1eb-f86ff3ff7b68" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/PlayWhenEndOfMedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyMP3Player/application/Actions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Actions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/playlists/jimi.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/playlists/jimi.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +24,8 @@
       <file leaf-file-name="MyWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/MyWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2100">
-              <caret line="109" selection-start-line="109" selection-end-line="109" />
+            <state relative-caret-position="252">
+              <caret line="120" column="57" lean-forward="true" selection-start-line="120" selection-start-column="57" selection-end-line="120" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#11699#12241#0" />
@@ -31,15 +38,36 @@
       <file leaf-file-name="Actions.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/application/Actions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-478">
-              <caret line="276" column="19" selection-start-line="276" selection-start-column="19" selection-end-line="276" selection-end-column="19" />
+            <state relative-caret-position="316">
+              <caret line="311" column="38" selection-start-line="311" selection-start-column="38" selection-end-line="311" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1241#1541#0" expanded="true" />
-                <element signature="e#1540#1541#0" expanded="true" />
-                <element signature="e#1614#1915#0" expanded="true" />
-                <element signature="e#1914#1915#0" expanded="true" />
+                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#493#494#0" expanded="true" />
+                <element signature="method#openFile#0;class#Actions#0" />
+                <element signature="e#1292#1592#0" expanded="true" />
+                <element signature="e#1591#1592#0" expanded="true" />
+                <element signature="e#1665#1966#0" expanded="true" />
+                <element signature="e#1965#1966#0" expanded="true" />
+                <element signature="method#playMusic#0;class#Actions#0" />
+                <element signature="method#playFunction#0;class#Actions#0" />
+                <element signature="method#pauseMusic#0;class#Actions#0" />
+                <element signature="method#stopMusic#0;class#Actions#0" />
+                <element signature="method#addToPlaylist#0;class#Actions#0" />
+                <element signature="method#addToPlaylistFunction#0;class#Actions#0" />
+                <element signature="method#createNewPlaylist#0;class#Actions#0" />
+                <element signature="method#addMP3fileToPlaylist#0;class#Actions#0" />
+                <element signature="method#openPlaylistFileAdd#0;class#Actions#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayWhenEndOfMedia.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/PlayWhenEndOfMedia.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="3" selection-start-line="2" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -47,7 +75,7 @@
       <file leaf-file-name="PlaylistFolder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/PlaylistFolder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="882">
+            <state relative-caret-position="320">
               <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -59,7 +87,7 @@
       <file leaf-file-name="ChooseFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/ChooseFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="819">
+            <state relative-caret-position="-231">
               <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -71,7 +99,7 @@
       <file leaf-file-name="SongProgress.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/SongProgress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="84">
               <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -94,6 +122,7 @@
       <find>setV</find>
       <find>getStack</find>
       <find>printStack</find>
+      <find>Song</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -112,6 +141,7 @@
         <option value="$PROJECT_DIR$/src/application/PlaylistFolder.java" />
         <option value="$PROJECT_DIR$/src/application/MyWindow.java" />
         <option value="$PROJECT_DIR$/src/application/ChooseFile.java" />
+        <option value="$PROJECT_DIR$/src/application/PlayWhenEndOfMedia.java" />
         <option value="$PROJECT_DIR$/src/application/Actions.java" />
       </list>
     </option>
@@ -137,7 +167,7 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,7 +201,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -307,6 +337,7 @@
       <workItem from="1528806831101" duration="14774000" />
       <workItem from="1528883372048" duration="31718000" />
       <workItem from="1528960797965" duration="1021000" />
+      <workItem from="1529005112137" duration="7325000" />
     </task>
     <servers />
   </component>
@@ -343,10 +374,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106212000" />
+    <option name="totallyTimeSpent" value="113537000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="TODO" order="11" />
@@ -358,7 +390,7 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49947917" weight="0.25185972" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.49947917" visible="true" weight="0.25185972" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
@@ -385,13 +417,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/application/MusicFileInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/SongProgress.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -437,10 +462,22 @@
           <caret line="106" column="45" selection-start-line="106" selection-start-column="45" selection-end-line="106" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1241#1541#0" expanded="true" />
-            <element signature="e#1540#1541#0" expanded="true" />
-            <element signature="e#1614#1915#0" expanded="true" />
-            <element signature="e#1914#1915#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="method#openFile#0;class#Actions#0" />
+            <element signature="e#1292#1592#0" expanded="true" />
+            <element signature="e#1591#1592#0" expanded="true" />
+            <element signature="e#1665#1966#0" expanded="true" />
+            <element signature="e#1965#1966#0" expanded="true" />
+            <element signature="method#playMusic#0;class#Actions#0" />
+            <element signature="method#playFunction#0;class#Actions#0" />
+            <element signature="method#pauseMusic#0;class#Actions#0" />
+            <element signature="method#stopMusic#0;class#Actions#0" />
+            <element signature="method#addToPlaylist#0;class#Actions#0" />
+            <element signature="method#addToPlaylistFunction#0;class#Actions#0" />
+            <element signature="method#createNewPlaylist#0;class#Actions#0" />
+            <element signature="method#addMP3fileToPlaylist#0;class#Actions#0" />
+            <element signature="method#openPlaylistFileAdd#0;class#Actions#0" />
           </folding>
         </state>
       </provider>
@@ -507,10 +544,22 @@
           <caret line="88" column="34" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1241#1541#0" expanded="true" />
-            <element signature="e#1540#1541#0" expanded="true" />
-            <element signature="e#1614#1915#0" expanded="true" />
-            <element signature="e#1914#1915#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="method#openFile#0;class#Actions#0" />
+            <element signature="e#1292#1592#0" expanded="true" />
+            <element signature="e#1591#1592#0" expanded="true" />
+            <element signature="e#1665#1966#0" expanded="true" />
+            <element signature="e#1965#1966#0" expanded="true" />
+            <element signature="method#playMusic#0;class#Actions#0" />
+            <element signature="method#playFunction#0;class#Actions#0" />
+            <element signature="method#pauseMusic#0;class#Actions#0" />
+            <element signature="method#stopMusic#0;class#Actions#0" />
+            <element signature="method#addToPlaylist#0;class#Actions#0" />
+            <element signature="method#addToPlaylistFunction#0;class#Actions#0" />
+            <element signature="method#createNewPlaylist#0;class#Actions#0" />
+            <element signature="method#addMP3fileToPlaylist#0;class#Actions#0" />
+            <element signature="method#openPlaylistFileAdd#0;class#Actions#0" />
           </folding>
         </state>
       </provider>
@@ -555,10 +604,22 @@
           <caret line="47" column="20" lean-forward="true" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1241#1541#0" expanded="true" />
-            <element signature="e#1540#1541#0" expanded="true" />
-            <element signature="e#1614#1915#0" expanded="true" />
-            <element signature="e#1914#1915#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="method#openFile#0;class#Actions#0" />
+            <element signature="e#1292#1592#0" expanded="true" />
+            <element signature="e#1591#1592#0" expanded="true" />
+            <element signature="e#1665#1966#0" expanded="true" />
+            <element signature="e#1965#1966#0" expanded="true" />
+            <element signature="method#playMusic#0;class#Actions#0" />
+            <element signature="method#playFunction#0;class#Actions#0" />
+            <element signature="method#pauseMusic#0;class#Actions#0" />
+            <element signature="method#stopMusic#0;class#Actions#0" />
+            <element signature="method#addToPlaylist#0;class#Actions#0" />
+            <element signature="method#addToPlaylistFunction#0;class#Actions#0" />
+            <element signature="method#createNewPlaylist#0;class#Actions#0" />
+            <element signature="method#addMP3fileToPlaylist#0;class#Actions#0" />
+            <element signature="method#openPlaylistFileAdd#0;class#Actions#0" />
           </folding>
         </state>
       </provider>
@@ -759,9 +820,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/ChooseFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/SongProgress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="84">
           <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -769,10 +840,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/PlayWhenEndOfMedia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" selection-start-line="2" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/MyWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2100">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
+        <state relative-caret-position="252">
+          <caret line="120" column="57" lean-forward="true" selection-start-line="120" selection-start-column="57" selection-end-line="120" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#11699#12241#0" />
@@ -781,19 +859,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/ChooseFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/PlaylistFolder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
+        <state relative-caret-position="320">
           <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -803,14 +871,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/Actions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-478">
-          <caret line="276" column="19" selection-start-line="276" selection-start-column="19" selection-end-line="276" selection-end-column="19" />
+        <state relative-caret-position="316">
+          <caret line="311" column="38" selection-start-line="311" selection-start-column="38" selection-end-line="311" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1241#1541#0" expanded="true" />
-            <element signature="e#1540#1541#0" expanded="true" />
-            <element signature="e#1614#1915#0" expanded="true" />
-            <element signature="e#1914#1915#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="method#openFile#0;class#Actions#0" />
+            <element signature="e#1292#1592#0" expanded="true" />
+            <element signature="e#1591#1592#0" expanded="true" />
+            <element signature="e#1665#1966#0" expanded="true" />
+            <element signature="e#1965#1966#0" expanded="true" />
+            <element signature="method#playMusic#0;class#Actions#0" />
+            <element signature="method#playFunction#0;class#Actions#0" />
+            <element signature="method#pauseMusic#0;class#Actions#0" />
+            <element signature="method#stopMusic#0;class#Actions#0" />
+            <element signature="method#addToPlaylist#0;class#Actions#0" />
+            <element signature="method#addToPlaylistFunction#0;class#Actions#0" />
+            <element signature="method#createNewPlaylist#0;class#Actions#0" />
+            <element signature="method#addMP3fileToPlaylist#0;class#Actions#0" />
+            <element signature="method#openPlaylistFileAdd#0;class#Actions#0" />
           </folding>
         </state>
       </provider>

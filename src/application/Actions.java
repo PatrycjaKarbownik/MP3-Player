@@ -10,12 +10,15 @@ import javafx.util.Duration;
 
 import java.io.*;
 import java.net.MalformedURLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 
 public class Actions {
+
+    private static Queue<String> trackQueue;
+
+    public static Queue<String> getTrackQueue() {
+        return trackQueue;
+    }
 
     public static void openFile(boolean one, String path) throws MalformedURLException {
         System.out.println("open");
@@ -231,13 +234,6 @@ public class Actions {
         }
     }
 
-
-
-
-
-
-
-
     public static void openPlaylistFunction() {
         System.out.println("open playlist");
 
@@ -263,142 +259,70 @@ public class Actions {
     }
 
     private static void readFromOpenFile(){
-        try {
-            System.out.println("read paths of Mp3 files from playlist");
-            String nameOfPlaylist = MyWindow.getComboBox().getValue().toString();
-            System.out.println(nameOfPlaylist);
-            File playlist = null;
-            String absolutePath = null;
+        System.out.println("read paths of Mp3 files from playlist");
+        String nameOfPlaylist = MyWindow.getComboBox().getValue().toString();
+        System.out.println(nameOfPlaylist);
+        File playlist = null;
+        String absolutePath = null;
 
-            for (String name : PlaylistFolder.getFileNamesList()) {
-                System.out.println("---" + name);
-                if(nameOfPlaylist == name) {
-                    absolutePath = PlaylistFolder.getPath() + "\\" + name + ".txt";
-                    break;
-                }
+        for (String name : PlaylistFolder.getFileNamesList()) {
+            System.out.println("---" + name);
+            if(nameOfPlaylist == name) {
+                absolutePath = PlaylistFolder.getPath() + "\\" + name + ".txt";
+                break;
             }
-
-            System.out.println(absolutePath);
-            playlist = new File(absolutePath);
-
-            System.out.println("znalazlem plik");
-           // System.out.println(playlist);
-
-            if(playlist != null) {
-                try(BufferedReader br = new BufferedReader(new FileReader(playlist))) {
-                    StringBuilder sb = new StringBuilder();
-                    String line = br.readLine();
-
-
-
-                    //File file = new File(line);
-
-                   // file.toURI().toURL().toString()
-
-                    List<String> list = new ArrayList<>();
-                 //   list.add(line.substring(1, line.length()));
-                  //  List<MediaPlayer> players = new ArrayList<MediaPlayer>();
-                 //   line = br.readLine();
-                    System.out.println("halo?");
-                    Media pick;
-
-                    File file;
-                    while(line != null) {
-
-                    //    /*File */file = new File(line);
-                     //   line = file.toURI().toURL().toString();
-                        list.add(line);
-                      //  pick = new Media(line);
-                        //ChooseFile.setPlayer(new MediaPlayer(pick));
-                        line = br.readLine();
-                     //   players.add(new MediaPlayer(pick));
-
-                    }
-
-                    br.close();
-
-                    System.out.println("czytam");
-
-                    //openFile(false, list.get(0));
-                    for(int i = 0; i < list.size(); ++i) {
-                        System.out.println(list.get(i));
-                    }
-
-                  //  System.out.println("read " + ChooseFile.getPlayer().getStatus());
-
-                  /*  for(int i = 1; i < list.size(); ++i) {
-                        while (ChooseFile.wait != false) System.out.println(i);
-                        openFile(false, list.get(i));
-                    }*/
-
-                 //   final MediaView mediaView = new MediaView(players.get(0));
-                   // players.get(0).play();
-
-                    openFile(false, list.get(0));
-                    for (int i = 0; i < list.size(); i++)
-                    {
-                        System.out.println("list " + list.get(i));
-                        String path = list.get(i);
-                        System.out.println(i);
-                        ChooseFile.getPlayer().setOnEndOfMedia(new Runnable() {
-                            @Override public void run() {
-                                try {
-                                    System.out.println(path);
-                                    openFile(false, path);
-                                } catch (MalformedURLException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        });
-                    }
-
-                    /*
-                    openFile(false, list.get(0));
-                    ChooseFile.getPlayer().setOnEndOfMedia(new Runnable() {
-                        @Override public void run() {
-                            try {
-                                for (int i = 0; i < list.size(); i++) {
-                                    String path = list.get(i);
-                                    System.out.println(path);
-                                    openFile(false, path);
-                                }
-
-                            } catch (MalformedURLException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    });
-                    */
-
-                    /*
-                    while (line != null) {
-                        if(ChooseFile.getPlayer().getStatus() != MediaPlayer.Status.PLAYING && ChooseFile.getPlayer().getStatus() != MediaPlayer.Status.UNKNOWN) {
-                            System.out.println("read WHILE " + ChooseFile.getPlayer().getStatus());
-                            *//*sb.append(line);
-                            sb.append(System.lineSeparator());*//*
-                            System.out.println("probuje czytac plik");
-                            openFile(false, line);
-                            System.out.println("otworzyl");
-                            line = br.readLine();
-                        }
-                    }*/
-
-                    System.out.println("nie wiem");
-                    String everything = sb.toString();
-                }
-            }
-
-        }catch(Exception e){
-            System.out.println(e);
         }
 
+        System.out.println(absolutePath);
+        playlist = new File(absolutePath);
+
+        System.out.println("znalazlem plik");
+        // System.out.println(playlist);
+
+        if(playlist != null) {
+            /*Queue<String> */trackQueue = new ArrayDeque<>();
+
+            try (BufferedReader br = new BufferedReader(new FileReader(playlist))) {
+                String line = br.readLine();
+
+                while(line != null) {
+                    trackQueue.add(line);
+                    line = br.readLine();
+                }
+
+                br.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        try {
+            playPlaylist();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
         MyWindow.getPlaylistSelectionToPlayStage().close();
     }
 
 
+public static void playPlaylist() throws MalformedURLException {
+        try {
+            openFile(false, trackQueue.poll());
+        }catch (NullPointerException e){
+            System.out.println("koniec");
+        }
 
-
-
+    ChooseFile.getPlayer().setOnEndOfMedia(new Runnable() {
+        @Override
+        public void run() {
+            try {
+                playPlaylist();
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+        }
+    });
+}
 
 
 
