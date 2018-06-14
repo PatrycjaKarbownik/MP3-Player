@@ -272,9 +272,8 @@ public class Actions {
 
             for (String name : PlaylistFolder.getFileNamesList()) {
                 System.out.println("---" + name);
-                if(nameOfPlaylist == name/*.substring(0, name.length())*/) {
+                if(nameOfPlaylist == name) {
                     absolutePath = PlaylistFolder.getPath() + "\\" + name + ".txt";
-                    //playlist = new File(PlaylistFolder.getPath() + "\\" + name + ".txt");
                     break;
                 }
             }
@@ -389,26 +388,6 @@ public class Actions {
                 }
             }
 
-
-            /*
-            if(ChooseFile.getFilePath() != null){
-                File playlist = new File("src\\data\\playlists\\" + nameOfPlaylist + ".txt");
-
-                FileWriter fw = new FileWriter(playlist.getAbsoluteFile(), true);
-                BufferedWriter bw = new BufferedWriter(fw);
-
-                // Write in file
-                bw.write(ChooseFile.getFilePath());
-                bw.newLine();
-
-                // Close connection
-                bw.close();
-            }
-            else {
-                MyWindow.errorStage("Cannot add track. File not chosen.");
-                return;
-            }
-*/
         }catch(Exception e){
             System.out.println(e);
         }
