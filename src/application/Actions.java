@@ -310,7 +310,7 @@ public class Actions {
     }
 
 
-public static void playPlaylist() throws MalformedURLException {
+    public static void playPlaylist() throws MalformedURLException {
         try {
             openFile(false, trackQueue.poll());
         }catch (NullPointerException e){
@@ -328,9 +328,6 @@ public static void playPlaylist() throws MalformedURLException {
         }
     });
 }
-
-
-
 
     public static void volumeChange(/*Number value*/){
         System.out.println("volume change");

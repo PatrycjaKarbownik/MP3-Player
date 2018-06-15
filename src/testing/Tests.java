@@ -95,7 +95,7 @@ public class Tests {
     public void testAddToPlaylist() throws IOException {
         //write
         String absolutePath = "D:\\Pati\\AA SERWER\\Documents\\Ważne rzeczy\\STUDIA\\" +
-                "4 semestr\\PROZ\\MyMP3Player\\src\\data\\playlists\\do_testow.txt";
+                "4 semestr\\PROZ\\MyMP3Player\\src\\data\\playlists\\testy2.txt";
         File playlist = new File(absolutePath);
 
         String filePath = "D:\\Pati\\AA SERWER\\Documents\\Ważne rzeczy\\STUDIA\\" +
@@ -119,7 +119,7 @@ public class Tests {
             String next_line = br.readLine();
 
             while(next_line != null) {
-                line = br.readLine();
+                line = next_line;
                 next_line = br.readLine();
             }
 
