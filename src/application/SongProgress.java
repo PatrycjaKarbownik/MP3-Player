@@ -30,7 +30,8 @@ public class SongProgress extends TimerTask {
     @Override
     public void run() {
         if(ChooseFile.getPlayer().getStatus() == MediaPlayer.Status.PLAYING) {
-            songProgress = (ChooseFile.getPlayer().getCurrentTime().toSeconds()) / (ChooseFile.getPlayer().getStopTime().toSeconds());
+            songProgress = (ChooseFile.getPlayer().getCurrentTime().toSeconds()) /
+                    (ChooseFile.getPlayer().getStopTime().toSeconds());
         }
     }
 }

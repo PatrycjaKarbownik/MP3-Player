@@ -5,7 +5,6 @@ import javafx.scene.control.Slider;
 import javafx.scene.media.EqualizerBand;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.MediaView;
 import javafx.util.Duration;
 
 import java.io.*;
@@ -147,13 +146,13 @@ public class Actions {
         String valueComboBox = MyWindow.getComboBox().getValue().toString();
 
         if(valueComboBox == "<create a new playlist>"){
-            System.out.println("jestem przed?");
+          //  System.out.println("jestem przed?");
             MyWindow.newPlaylistNameStage();
         }
         else {
             openPlaylistFileAdd();
         }
-        System.out.println("jestem za?");
+      //  System.out.println("jestem za?");
 
     }
 
@@ -282,7 +281,7 @@ public class Actions {
         System.out.println(absolutePath);
         playlist = new File(absolutePath);
 
-        System.out.println("znalazlem plik");
+     //   System.out.println("znalazlem plik");
         // System.out.println(playlist);
 
         if(playlist != null) {
