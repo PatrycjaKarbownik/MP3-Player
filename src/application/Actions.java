@@ -243,8 +243,11 @@ public class Actions {
             MyWindow.errorStage("Choose playlist or cancel");
         }
         else {
-            String valueComboBox = MyWindow.getComboBox().getValue().toString();
-            openPlaylistFile();
+          try {
+              openPlaylistFile();
+          } catch(NullPointerException e){
+            //  System.out.println("playlist is empty");
+          }
         }
         //System.out.println("jestem za?");
     }
@@ -254,7 +257,10 @@ public class Actions {
         try {
             readFromOpenFile();
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println("playlist is empty");
+            MyWindow.getPlaylistSelectionToPlayStage().close();
+            MyWindow.errorStage("Playlist is empty");
+           // System.out.println(e);
         }
     }
 
